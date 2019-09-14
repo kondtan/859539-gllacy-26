@@ -16,7 +16,7 @@
           <li><a href="">О Компании</a></li>
         </ul>
       </nav>
-        <a href=""><img src="" alt="">Поиск</a>
+        <a href="">Поиск</a>
         <a href="">Вход</a>
         <a href="">Пусто</a>
       <ul>
@@ -34,35 +34,37 @@
       </section>
 
       <section class="bargain">
+        <h2 class="visually-hidden">Акции</h2>
         <section class="rasberry-bargain">  
-          <h2>Малинка даром!</h2>
+          <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a href="">Хочу варенье!</a>
         </section>
         <section class="chocolate-bargain">
-          <h2>Шоколадки даром!</h2>
+          <h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a href="">Хочу шоколадки!</a>
         </section>
       </section>
 
       <section class="hits">
+        <h2 class="visually-hidden">Хиты продаж</h2>
           <ul class="hits-list">
               <li class="hit-item">
-                   <h3>
-                      <a href="">
-                        Сливочное с апельсиновым джемом и цитрусовой стружкой
-                      </a>
-                  </h3>
-                  <p class="catalog-item-image">
-                      <a href="">
-                          <img src="img/orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                       </a>
-                   </p>
-                   <p class="catalog-item-price">
-                       <span>310</span>
-                       <span class="weight">/кг</span>
-                   </p>
+                <h3>
+                   <a href="">
+                     Сливочное с апельсиновым джемом и цитрусовой стружкой
+                   </a>
+                </h3>
+                <p class="catalog-item-image">
+                   <a href="">
+                       <img src="img/orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                    </a>
+                </p>
+                <p class="catalog-item-price">
+                    <span>310</span>
+                    <span class="weight">/кг</span>
+                </p>
               </li>
                
                <li class="hit-item">
@@ -116,7 +118,9 @@
                 </p>
               </li>
             </ul>
-            
+      </section>  
+
+      <article>
         <h2>
           Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
         </h2>
@@ -132,7 +136,7 @@
         <p>
           Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
         </p>
-      </section>
+      </article>
 
       <article>
         <h3>Новое в нашем блоге</h3>
@@ -142,13 +146,20 @@
       </article>
 
       <section class=subscribe-form>
+        <h2 class="visually-hidden">Подписка</h2>
         <p>
           Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
         </p>
-        <!-- форма + кнопка -->
+        <form>
+          <p>
+            <input type="email" name="email" placeholder="email@example.com">
+          </p>
+        </form>
+        <button type="submit" value="Отправить">Отправить</button>
       </section>
 
       <section class="address">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
         <div class="map"></div>
         <section class="text-address">
           <p>Адрес главного офиса и офлайн-магазина: <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
@@ -161,24 +172,62 @@
       </section>
     </main>
 
-      <footer>
-        <ul>
-          <li><a href=""><img src="" alt="twitter">Twitter</a></li>
-          <li><a href=""><img src="" alt="instagram">Instagram</a></li>
-          <li><a href=""><img src="" alt="facebook">Facebook</a></li>
-          <li><a href=""><img src="" alt="vkontakte">VKontakte</a></li>
-        </ul>
+    <footer>
+      <ul>
+        <li><a href=""><img src="" alt="twitter">Twitter</a></li>
+         <li><a href=""><img src="" alt="instagram">Instagram</a></li>
+         <li><a href=""><img src="" alt="facebook">Facebook</a></li>
+         <li><a href=""><img src="" alt="vkontakte">VKontakte</a></li>
+      </ul>
 
-        <ul>
-          <li><a href="">Для поставщиков</a></li>
-          <li><a href="">О производстве</a></li>
-          <li><a href="">Наши документы</a></li>
-          <li><a href="">Экологические стандарты</a></li>
-        </ul>
-        <section>
-          <img src="" alt="htmlacademy-logo">
-          Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019
+      <ul>
+         <li><a href="">Для поставщиков</a></li>
+        <li><a href="">О производстве</a></li>
+         <li><a href="">Наши документы</a></li>
+        <li><a href="">Экологические стандарты</a></li>
+       </ul>
+       <section>
+         <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
+         Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019
         </section>
-      </footer>
+    </footer>
+
+    <section class="modal feedback">
+      <p>Мы обязательно вам ответим!</p>
+      <form>
+        <p>
+          <input type="text" name="name" placeholder="Имя Фамилия">
+          <input type="email" name="email" placeholder="email@example.com">
+          <input type="text" name="contents" placeholder="В свободной форме">
+        </p>
+      <button type="submit" value="Отправить">Отправить</button>
+      </form>
+      <button class="modal-close" type="button" value="Закрыть">Закрыть</button>
+    </section>
+
+    <form class="search">
+      <input type="text" placeholder="Крем-брюле">
+    </form>
+
+    <section class="login">
+      <h2 class="visually-hidden">Личный кабинет</h2>
+      <form>
+        <input type="text" name="login" placeholder="email@example.com">
+        <input type="password" name="password" placeholder="••••••••">
+        <a class="restore" href="">Забыли пароль?</a> 
+        <a class="new-member" href="">Новая регистрация</a>
+        <button type="submit">Войти</button>
+      </form>
+    </section>
+
+    <!--нужно ли выпадающий список завернуть в какой-нибудь div?-->
+    <ul class="catalogue catalogue-dropdown">
+      <li><a href="">Новинки</a></li>
+      <li><a href="">Сливочное</a></li>
+      <li><a href="">Щербеты</a></li>
+      <li><a href="">Фруктовый лед</a></li>
+      <li><a href="">Мелорин</a></li>
+   </ul>
+ 
   </body>
 </html>
