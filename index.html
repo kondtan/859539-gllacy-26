@@ -152,10 +152,11 @@
         </p>
         <form>
           <p>
-            <input type="email" name="email" placeholder="email@example.com">
+            <label class="visually-hidden" for="newsletter">Введите email, чтобы подписаться на рассылку</label>
+            <input id="newsletter" type="email" name="email" placeholder="email@example.com">
           </p>
+          <button type="submit" value="Отправить">Отправить</button>
         </form>
-        <button type="submit" value="Отправить">Отправить</button>
       </section>
 
       <section class="address">
@@ -192,35 +193,56 @@
         </section>
     </footer>
 
-    <section class="modal feedback">
+    <div class="modal feedback">
       <p>Мы обязательно вам ответим!</p>
       <form>
         <p>
-          <input type="text" name="name" placeholder="Имя Фамилия">
-          <input type="email" name="email" placeholder="email@example.com">
-          <input type="text" name="contents" placeholder="В свободной форме">
+          <label class="visually-hidden" for="submission-username">Введите имя и фамилию</label>
+          <input id="submission-username" type="text" name="name" placeholder="Имя Фамилия">
         </p>
-      <button type="submit" value="Отправить">Отправить</button>
+        <p>
+          <label class="visually-hidden" for="submission-email">Введите email</label>
+          <input id="submission-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label class="visually-hidden" for="submission-contents">Ваш вопрос в свободной форме</label>
+          <input id="submission-contents" type="text" name="contents" placeholder="В свободной форме">
+        </p>
+        <button type="submit" value="Отправить">Отправить</button>
       </form>
       <button class="modal-close" type="button" value="Закрыть">Закрыть</button>
-    </section>
+    </div>
 
+    <div>
     <form class="search">
-      <input type="text" placeholder="Крем-брюле">
+      <p>
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input id="search" type="text" placeholder="Крем-брюле">
+      </p>
+      <button class="visually-hidden" type="submit" value="Поиск">Поиск</button>
     </form>
+    </div>
 
-    <section class="login">
+    <div class="login">
       <h2 class="visually-hidden">Личный кабинет</h2>
       <form>
-        <input type="text" name="login" placeholder="email@example.com">
-        <input type="password" name="password" placeholder="••••••••">
-        <a class="restore" href="">Забыли пароль?</a> 
-        <a class="new-member" href="">Новая регистрация</a>
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input id="user-login" type="text" name="login" placeholder="email@example.com">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input id="user-password" type="password" name="password" placeholder="••••••••">
+        </p>
+        <p>
+          <a class="restore" href="">Забыли пароль?</a> 
+          <a class="new-member" href="">Новая регистрация</a>
+        </p>
         <button type="submit">Войти</button>
       </form>
-    </section>
+    </div>
 
-    <!--нужно ли выпадающий список завернуть в какой-нибудь div?-->
+    <div>
     <ul class="catalogue catalogue-dropdown">
       <li><a href="">Новинки</a></li>
       <li><a href="">Сливочное</a></li>
@@ -228,6 +250,7 @@
       <li><a href="">Фруктовый лед</a></li>
       <li><a href="">Мелорин</a></li>
    </ul>
+   </div>
  
   </body>
 </html>
