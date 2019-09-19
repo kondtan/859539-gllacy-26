@@ -2,6 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet"> 
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
@@ -16,9 +19,9 @@
           <li><a href="">О Компании</a></li>
         </ul>
       </nav>
-        <a href="">Поиск</a>
-        <a href="">Вход</a>
-        <a href="">Пусто</a>
+        <a class="header-search" href="">Поиск</a>
+        <a class="header-login" href="">Вход</a>
+        <a class="header-cart" href="">Пусто</a>
       <ul>
         <li class="schedule">С 10 до 20, ежедневно</li>
         <li class="phone-number">8 812 450-25-25</li>
@@ -120,7 +123,7 @@
             </ul>
       </section>  
 
-      <article>
+      <article class="about">
         <h2>
           Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
         </h2>
@@ -138,31 +141,33 @@
         </p>
       </article>
 
-      <article>
+      <article class="blog-latest">
         <h3>Новое в нашем блоге</h3>
-        <a href="">10 способов сервировки<br>
+        <a class="blog-item" href="">10 способов сервировки<br>
             фруктовых щербетов к<br>
             столу</a>
       </article>
 
       <section class=subscribe-form>
-        <h2 class="visually-hidden">Подписка</h2>
-        <p>
-          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
-        </p>
-        <form>
+        <div class="subscribe-form-light">
+          <h2 class="visually-hidden">Подписка</h2>
           <p>
-            <label class="visually-hidden" for="newsletter">Введите email, чтобы подписаться на рассылку</label>
-            <input id="newsletter" type="email" name="email" placeholder="email@example.com">
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
           </p>
-          <button type="submit" value="Отправить">Отправить</button>
-        </form>
+          <form>
+            <p>
+              <label class="visually-hidden" for="newsletter">Введите email, чтобы подписаться на рассылку</label>
+              <input id="newsletter" type="email" name="email" placeholder="email@example.com">
+            </p>
+            <button type="submit" value="Отправить">Отправить</button>
+          </form>
+        </div>
       </section>
 
       <section class="address">
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <div class="map"></div>
-        <section class="text-address">
+        <section class="address-feedback">
           <p>Адрес главного офиса и офлайн-магазина: <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
           <p>Для заказов по телефону:<br>
           <span>8 812 450-25-25</span><br>
@@ -174,23 +179,23 @@
     </main>
 
     <footer>
-      <ul>
-        <li><a href=""><img src="" alt="twitter">Twitter</a></li>
-         <li><a href=""><img src="" alt="instagram">Instagram</a></li>
-         <li><a href=""><img src="" alt="facebook">Facebook</a></li>
-         <li><a href=""><img src="" alt="vkontakte">VKontakte</a></li>
+      <ul class="social-links">
+        <li><a href=""><img class="twitter-link" src="img/svg/twitter.svg" alt="twitter"></a></li>
+        <li><a href=""><img class="instagram-link" src="img/svg/instagram.svg" alt="instagram"></a></li>
+        <li><a href=""><img class="facebook-link" src="img/svg/fb.svg" alt="facebook"></a></li>
+        <li><a href=""><img class="vkontakte-link" src="img/svg/vk.svg" alt="vkontakte"></a></li>
       </ul>
 
-      <ul>
-         <li><a href="">Для поставщиков</a></li>
+      <ul class="footer-nav">
+        <li><a href="">Для поставщиков</a></li>
         <li><a href="">О производстве</a></li>
-         <li><a href="">Наши документы</a></li>
+        <li><a href="">Наши документы</a></li>
         <li><a href="">Экологические стандарты</a></li>
-       </ul>
-       <section>
-         <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
-         Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019
-        </section>
+      </ul>
+      <section class="made-in">
+        <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
+        Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019
+      </section>
     </footer>
 
     <div class="modal feedback">
