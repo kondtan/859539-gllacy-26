@@ -9,6 +9,8 @@
   </head>
   <body>
     <header>
+      <div class="main-navigation">
+        <div class="container-left"> 
         <a>
           <img src="img/gllacy-logo.png" alt="Логотип GllacyShop">
         </a>
@@ -19,21 +21,27 @@
           <li><a href="">О Компании</a></li>
         </ul>
       </nav>
+      </div>
+      <div class="container-right">
         <a class="header-search" href="">Поиск</a>
         <a class="header-login" href="">Вход</a>
         <a class="header-cart cart-active" href="">2 товара</a>
+      </div>
+      </div>
+      <div class="schedule-wrapper">
       <ul>
         <li class="schedule">С 10 до 20, ежедневно</li>
         <li class="phone-number">8 812 450-25-25</li>
       </ul>
+      </div>
     </header>
-    <main>
-      <h1>Сливочное мороженое</h1>
+    <main> 
       <ul class="breadcrumbs">
-        <li><a href="index.html">Главная &#187;</a></li>
-        <li><a href="catalog.html">Каталог &#187;</a></li>
+        <li><a href="index.html">Главная&nbsp; &#187; &nbsp;</a></li>
+        <li><a href="catalog.html">Каталог&nbsp; &#187; &nbsp;</a></li>
         <li><a class="breadcrumbs-current" href="#">Сливочное</a></li>
       </ul>
+      <h1>Сливочное мороженое</h1>
       <!-- место для фильтра-->
 
       <h2 class="visually-hidden">Список видов сливочного мороженого</h2>
@@ -252,23 +260,30 @@
       </ol>
   </main>
   <footer>
-    <ul class="social-links">
-      <li><a href=""><img src="img/svg/twitter.svg" alt="Twitter"></a></li>
-      <li><a href=""><img src="img/svg/instagram.svg" alt="Instagram"></a></li>
-      <li><a href=""><img src="img/svg/fb.svg" alt="Facebook"></a></li>
-      <li><a href=""><img src="img/svg/vk.svg" alt="VKontakte"></a></li>
-    </ul>
+    <div class="footer-wrapper footer-catalog">
+      <div class="social-wrapper">
+      <ul class="social-links">
+        <li><a href=""><img class="twitter-link" src="img/svg/twitter.svg" alt="twitter"></a></li>
+        <li><a href=""><img class="instagram-link" src="img/svg/instagram.svg" alt="instagram"></a></li>
+        <li><a href=""><img class="facebook-link" src="img/svg/fb.svg" alt="facebook"></a></li>
+        <li><a href=""><img class="vkontakte-link" src="img/svg/vk.svg" alt="vkontakte"></a></li>
+      </ul>
+      </div>
 
-    <ul class="footer-nav">
-      <li><a href="">Для поставщиков</a></li>
-      <li><a href="">О производстве</a></li>
-      <li><a href="">Наши документы</a></li>
-      <li><a href="">Экологические стандарты</a></li>
-    </ul>
-    <section class="made-in">
-      <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
-      Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019
-    </section>
+      <div class="footer-nav-wrapper">
+      <ul class="footer-nav">
+        <li><a href="">Для поставщиков</a></li>
+        <li><a href="">О производстве</a></li>
+        <li><a href="">Наши документы</a></li>
+        <li><a href="">Экологические стандарты</a></li>
+      </ul>
+      </div>
+
+      <section class="made-in">
+        <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
+        <div class="made-in-wrapper">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019</div>
+      </section>
+    </div>
   </footer>
 
   <section class="cart">

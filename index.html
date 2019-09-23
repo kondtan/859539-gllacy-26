@@ -9,6 +9,8 @@
   </head>
   <body>
     <header>
+      <div class="main-navigation">
+        <div class="container-left"> 
         <a>
           <img src="img/gllacy-logo.png" alt="Логотип GllacyShop">
         </a>
@@ -19,13 +21,19 @@
           <li><a href="">О Компании</a></li>
         </ul>
       </nav>
+      </div>
+      <div class="container-right">
         <a class="header-search" href="">Поиск</a>
         <a class="header-login" href="">Вход</a>
         <a class="header-cart" href="">Пусто</a>
+      </div>
+      </div>
+       <div class="schedule-wrapper">
       <ul>
         <li class="schedule">С 10 до 20, ежедневно</li>
         <li class="phone-number">8 812 450-25-25</li>
       </ul>
+      </div>
     </header>
 
     <main>
@@ -127,42 +135,52 @@
         <h2>
           Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
         </h2>
-        <p>
-          Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-        </p>
-        <p>
-          Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-        </p>
-        <p>
-          Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-        </p>
-        <p>
-          Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-        </p>
+        <div class="about-wrapper">
+        <div class="column-left">
+          <p>
+           Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+          </p>
+          <p>
+            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+          </p>
+        </div>
+        <div class="column-right">
+         <p>
+           Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+         </p>
+         <p>
+            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+          </p>
+        </div>
+      </div>
       </article>
 
+      <div class="container">
       <article class="blog-latest">
-        <h3>Новое в нашем блоге</h3>
-        <a class="blog-item" href="">10 способов сервировки<br>
-            фруктовых щербетов к<br>
-            столу</a>
+        <div class="blog-wrapper">
+          <h3>Новое в нашем блоге</h3>
+          <a class="blog-item" href="">10 способов сервировки<br>
+              фруктовых щербетов к<br>
+              столу</a>
+        </div>
       </article>
 
       <section class=subscribe-form>
         <div class="subscribe-form-light">
           <h2 class="visually-hidden">Подписка</h2>
-          <p>
+          <p class="subscribe-offer">
             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
           </p>
           <form>
             <p>
               <label class="visually-hidden" for="newsletter">Введите email, чтобы подписаться на рассылку</label>
               <input id="newsletter" type="email" name="email" placeholder="email@example.com">
-            </p>
             <button type="submit" value="Отправить">Отправить</button>
+            </p>
           </form>
         </div>
       </section>
+      </div>
 
       <section class="address">
         <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -179,23 +197,30 @@
     </main>
 
     <footer>
+      <div class="footer-wrapper">
+      <div class="social-wrapper">
       <ul class="social-links">
         <li><a href=""><img class="twitter-link" src="img/svg/twitter.svg" alt="twitter"></a></li>
         <li><a href=""><img class="instagram-link" src="img/svg/instagram.svg" alt="instagram"></a></li>
         <li><a href=""><img class="facebook-link" src="img/svg/fb.svg" alt="facebook"></a></li>
         <li><a href=""><img class="vkontakte-link" src="img/svg/vk.svg" alt="vkontakte"></a></li>
       </ul>
+      </div>
 
+      <div class="footer-nav-wrapper">
       <ul class="footer-nav">
         <li><a href="">Для поставщиков</a></li>
         <li><a href="">О производстве</a></li>
         <li><a href="">Наши документы</a></li>
         <li><a href="">Экологические стандарты</a></li>
       </ul>
+      </div>
+
       <section class="made-in">
         <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
-        Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019
+        <div class="made-in-wrapper">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019</div>
       </section>
+      </div>
     </footer>
 
     <div class="modal feedback">
