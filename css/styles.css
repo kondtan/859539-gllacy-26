@@ -699,17 +699,19 @@ ul.breadcrumbs {
 }
 
 .footer-wrapper {
-    width: 1200px;
+    width: 1146px;
     height: 103px;
 
     display: flex;
     justify-content: space-between;
 
+    border-top: solid 1px rgba(255,255,255, 0.3);
+
     margin-left: auto;
     margin-right: auto;
 }
 
-.social-wrapper ul {
+ul.social {
     width: 185px;
     height: 38px;
 
@@ -722,7 +724,7 @@ ul.breadcrumbs {
     padding: 0px;
 }
 
-.footer-nav-wrapper ul {
+ul.footer-nav {
     width: 326px;
     height: 40px;
 
@@ -744,10 +746,6 @@ ul.breadcrumbs {
     margin-top: 20px;
     margin-right: 25px;
     padding: 0px;
-}
-
-.footer-catalog {
-    border-top: solid 1px rgba(255,255,255, 0.3);
 }
 
 ul.catalog-list {

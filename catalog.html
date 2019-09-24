@@ -40,7 +40,69 @@
     </header>
     <main>
       <h1>Сливочное мороженое</h1>
-      <!-- место для фильтра-->
+      <section class="item-fiter">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <fieldset class="sort-popular">
+          <legend>Сортировка:</legend>
+          <select name="theme">
+            <option value="filter-popular">По популярности</option>
+            <option value="filter-price-higher">По возрастанию цены</option>
+            <option value="filter-price-lower">По убыванию цены</option>
+          </select>
+        </fieldset>
+        <fieldset class="sort-price">
+          <legend>Цена: 100 руб. – 500 руб.</legend>
+          <!-- тут кнопки? -->
+        </fieldset>
+        <fieldset class="sort-fat">
+          <legend>Жирность:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="filter-input-radio" type="radio" name="product-group" value="zero-percent" id="zero-percent">
+              <label for="zero-percent">0%</label> 
+            </li>
+            <li class="filter-option">
+              <input class="filter-input-radio" type="radio" name="product-group" value="below-ten-percent" id="below-10-percent" checked>
+              <label for="below-10-percent">до 10%</label> 
+            </li>
+            <li class="filter-option">
+              <input class="filter-input-radio" type="radio" name="product-group" value="below-30-percent" id="below-30-percent">
+              <label for="below-30-percent">до 30%</label> 
+            </li>
+            <li class="filter-option">
+              <input class="filter-input-radio" type="radio" name="product-group" value="above-30-percent" id="above-30-percent">
+              <label for="above-30-percent">выше 30%</label> 
+            </li>
+          </ul>
+        </fieldset>
+        
+        <fieldset class="sort-filling">
+          <legend>Наполнители:</legend>
+          <ul class="filling-checkbox">
+            <li>
+              <input id="chocolate-filling" name="chocolate-filling" type="checkbox" checked>
+              <label for="chocolate-filling">шоколадные</label>
+            </li>
+            <li>
+              <input id="sprinkles-filling" name="sprinkles-filling" type="checkbox" checked>
+              <label for="sprinkles-filling">сахарные присыпки</label>
+            </li>
+            <li>
+              <input id="fruit-filling" name="fruit-filling" type="checkbox">
+              <label for="fruit-filling">фрукты</label>
+            </li>
+            <li>
+              <input id="syrup-filling" name="syrup-filling" type="checkbox">
+              <label for="syrup-filling">сиропы</label>
+            </li>
+            <li>
+              <input id="jam-filling" name="jam-filling" type="checkbox">
+              <label for="jam-filling">джемы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit">Применить</button>
+      </section>
 
       <h2 class="visually-hidden">Список видов сливочного мороженого</h2>
       <ul class="catalog-list">
@@ -260,28 +322,24 @@
   </main>
   <footer>
     <div class="footer-wrapper footer-catalog">
-      <div class="social-wrapper">
-      <ul class="social-links">
+      <ul class="social">
         <li><a href=""><img class="twitter-link" src="img/svg/twitter.svg" alt="twitter"></a></li>
         <li><a href=""><img class="instagram-link" src="img/svg/instagram.svg" alt="instagram"></a></li>
         <li><a href=""><img class="facebook-link" src="img/svg/fb.svg" alt="facebook"></a></li>
         <li><a href=""><img class="vkontakte-link" src="img/svg/vk.svg" alt="vkontakte"></a></li>
       </ul>
-      </div>
-
-      <div class="footer-nav-wrapper">
+      
       <ul class="footer-nav">
         <li><a href="">Для поставщиков</a></li>
         <li><a href="">О производстве</a></li>
         <li><a href="">Наши документы</a></li>
         <li><a href="">Экологические стандарты</a></li>
       </ul>
-      </div>
 
-      <section class="made-in">
+      <div class="made-in">
         <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
         <div class="made-in-wrapper">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019</div>
-      </section>
+      </div>
     </div>
   </footer>
 
