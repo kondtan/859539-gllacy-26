@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
     background-color: #849d8f;
@@ -58,6 +58,11 @@ header .phone-number {
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
+    color: #ffffff;
+}
+
+header .phone-number a {
+    text-decoration: none;
     color: #ffffff;
 }
 
@@ -328,6 +333,11 @@ div.subscribe-form-light {
     color: #323232;
 }
 
+.address-feedback a {
+    text-decoration: none;
+    color: #323232;
+}
+
 .address-feedback span {
     font-size: 18px;
     font-weight: bold;
@@ -512,14 +522,14 @@ span.weight {
     line-height: 45px;
 }
 
-
+/* 
 .modal,
 .search,
 .login,
 .catalogue-dropdown,
 .cart {
     display: none;
-}
+} */
 
 
 /* стили для сетки */
