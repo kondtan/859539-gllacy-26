@@ -40,9 +40,9 @@
     </header>
     <main>
       <h1>Сливочное мороженое</h1>
-      <section class="item-fiter">
+      <div class="item-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <fieldset class="sort-popular">
+        <fieldset class="popularity">
           <legend>Сортировка:</legend>
           <select name="theme">
             <option value="filter-popular">По популярности</option>
@@ -50,28 +50,32 @@
             <option value="filter-price-lower">По убыванию цены</option>
           </select>
         </fieldset>
-        <fieldset class="sort-price">
+        <fieldset class="price">
           <legend>Цена: 100 руб. – 500 руб.</legend>
-          <!-- тут кнопки? -->
+          <span>*price range*</span>
         </fieldset>
-        <fieldset class="sort-fat">
+        <fieldset class="fat">
           <legend>Жирность:</legend>
           <ul>
             <li class="filter-option">
-              <input class="filter-input-radio" type="radio" name="product-group" value="zero-percent" id="zero-percent">
-              <label for="zero-percent">0%</label> 
+              <label>
+              <input class="filter-input-radio" type="radio" name="product-group" value="zero-percent">
+              0%</label> 
             </li>
             <li class="filter-option">
-              <input class="filter-input-radio" type="radio" name="product-group" value="below-ten-percent" id="below-10-percent" checked>
-              <label for="below-10-percent">до 10%</label> 
+              <label>
+              <input class="filter-input-radio" type="radio" name="product-group" value="below-ten-percent" checked>до 10%</label> 
             </li>
             <li class="filter-option">
-              <input class="filter-input-radio" type="radio" name="product-group" value="below-30-percent" id="below-30-percent">
-              <label for="below-30-percent">до 30%</label> 
+              <label>
+              <input class="filter-input-radio" type="radio" name="product-group" value="below-30-percent">
+              до 30%</label> 
             </li>
             <li class="filter-option">
-              <input class="filter-input-radio" type="radio" name="product-group" value="above-30-percent" id="above-30-percent">
-              <label for="above-30-percent">выше 30%</label> 
+              <label>
+              <input class="filter-input-radio" type="radio" name="product-group" value="above-30-percent">
+              выше 30%
+              </label> 
             </li>
           </ul>
         </fieldset>
@@ -80,29 +84,39 @@
           <legend>Наполнители:</legend>
           <ul class="filling-checkbox">
             <li>
-              <input id="chocolate-filling" name="chocolate-filling" type="checkbox" checked>
-              <label for="chocolate-filling">шоколадные</label>
+              <label>
+              <input name="chocolate-filling" type="checkbox" checked>
+              шоколадные
+              </label>
             </li>
             <li>
-              <input id="sprinkles-filling" name="sprinkles-filling" type="checkbox" checked>
-              <label for="sprinkles-filling">сахарные присыпки</label>
+              <label>
+              <input name="sprinkles-filling" type="checkbox" checked>
+              сахарные присыпки
+              </label>
             </li>
             <li>
-              <input id="fruit-filling" name="fruit-filling" type="checkbox">
-              <label for="fruit-filling">фрукты</label>
+              <label>
+              <input name="fruit-filling" type="checkbox">
+              фрукты
+              </label>
             </li>
             <li>
-              <input id="syrup-filling" name="syrup-filling" type="checkbox">
-              <label for="syrup-filling">сиропы</label>
+              <label>
+              <input name="syrup-filling" type="checkbox">
+              сиропы
+              </label>
             </li>
             <li>
-              <input id="jam-filling" name="jam-filling" type="checkbox">
-              <label for="jam-filling">джемы</label>
+              <label>
+              <input name="jam-filling" type="checkbox">
+              джемы
+              </label>
             </li>
           </ul>
         </fieldset>
         <button type="submit">Применить</button>
-      </section>
+      </div>
 
       <h2 class="visually-hidden">Список видов сливочного мороженого</h2>
       <ul class="catalog-list">
