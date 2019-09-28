@@ -236,6 +236,10 @@ article h3 {
     color: #323232;
 }
 
+.blog-latest p {
+    width: 300px;
+}
+
 a.blog-item {
     font-size: 24px;
     font-weight: 700;
@@ -327,15 +331,29 @@ div.subscribe-form-light {
     background-color: #ffffff;
 }
 
-.address-feedback p {
+.address-text {
+    width: 200px;
     font-size: 14px;
     line-height: 24px;
     color: #323232;
 }
 
-.address-feedback a {
+.address-bold {
+    width: 220px;
+    min-height: 41px;
+    
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #323232;
+}
+
+a.address-phone {
     text-decoration: none;
     color: #323232;
+
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .address-feedback span {
@@ -425,9 +443,6 @@ footer.social-links {
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255,188,158, 0.3);
 }
-
-
-/* стилизуем каталог */
 
 a.catalog-current {
     width: 87px;
@@ -531,8 +546,6 @@ span.weight {
     display: none;
 } */
 
-
-/* стили для сетки */
 header,
 main,
 footer {
