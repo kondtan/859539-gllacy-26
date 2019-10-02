@@ -44,11 +44,11 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <fieldset class="popularity">
           <legend>Сортировка:</legend>
-          <select name="theme">
-            <option value="filter-popular">По популярности</option>
-            <option value="filter-price-higher">По возрастанию цены</option>
-            <option value="filter-price-lower">По убыванию цены</option>
-          </select>
+            <select name="theme" class="filter-select">
+              <option value="filter-popular">по популярности</option>
+              <option value="filter-price-higher">по возрастанию цены</option>
+              <option value="filter-price-lower">по убыванию цены</option>
+            </select>
         </fieldset>
         <fieldset class="price">
           <legend>Цена: 100 руб. – 500 руб.</legend>
@@ -59,57 +59,57 @@
           <ul>
             <li class="filter-option">
               <label>
-              <input class="filter-input-radio" type="radio" name="product-group" value="zero-percent">
+              <input class="filter-input filter-input-radio" type="radio" name="product-group" value="zero-percent">
               0%</label> 
             </li>
             <li class="filter-option">
               <label>
-              <input class="filter-input-radio" type="radio" name="product-group" value="below-ten-percent" checked>до 10%</label> 
+              <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-ten-percent" checked>до 10%</label> 
             </li>
             <li class="filter-option">
               <label>
-              <input class="filter-input-radio" type="radio" name="product-group" value="below-30-percent">
+              <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-30-percent">
               до 30%</label> 
             </li>
             <li class="filter-option">
               <label>
-              <input class="filter-input-radio" type="radio" name="product-group" value="above-30-percent">
+              <input class="filter-input filter-input-radio" type="radio" name="product-group" value="above-30-percent">
               выше 30%
               </label> 
             </li>
           </ul>
         </fieldset>
         
-        <fieldset class="sort-filling">
+        <fieldset class="filling">
           <legend>Наполнители:</legend>
           <ul class="filling-checkbox">
             <li>
               <label>
-              <input name="chocolate-filling" type="checkbox" checked>
+              <input class="filter-input" name="chocolate-filling" type="checkbox" checked>
               шоколадные
               </label>
             </li>
             <li>
               <label>
-              <input name="sprinkles-filling" type="checkbox" checked>
+              <input class="filter-input" name="sprinkles-filling" type="checkbox" checked>
               сахарные присыпки
               </label>
             </li>
             <li>
               <label>
-              <input name="fruit-filling" type="checkbox">
+              <input class="filter-input" name="fruit-filling" type="checkbox">
               фрукты
               </label>
             </li>
             <li>
               <label>
-              <input name="syrup-filling" type="checkbox">
+              <input class="filter-input" name="syrup-filling" type="checkbox">
               сиропы
               </label>
             </li>
             <li>
               <label>
-              <input name="jam-filling" type="checkbox">
+              <input class="filter-input" name="jam-filling" type="checkbox">
               джемы
               </label>
             </li>
@@ -326,12 +326,13 @@
         </li>
       </ul>
       <ol class="pagination">
-        <li><a href="">&#x3c;</a></li>
-        <li class="pagination-current">1</li>
-        <li><a href="">2</a></li>
-        <li><a href="">4</a></li>
-        <li><a href="">5</a></li>
-        <li><a href="">&#x3e;</a></li>
+        <li><a href="" class="pagination-item prev disabled">&#x3c;</a></li>
+        <li><a class="pagination-item pagination-current"><span>1</span></a></li>
+        <li><a href="" class="pagination-item">2</a></li>
+        <li><a href="" class="pagination-item">3</a></li>
+        <li><a href="" class="pagination-item">4</a></li>
+        <li><a href="" class="pagination-item">5</a></li>
+        <li><a href="" class="pagination-item next">&#x3e;</a></li>
       </ol>
   </main>
   <footer>
