@@ -5,23 +5,27 @@ body {
     background-color: #849d8f;
 }
 
-nav {
+.site-nav {
+    width: 363px;
+    
     font-size: 16px;
     line-height: 18px;
 }
 
-nav a {
+
+.site-nav a {
     color: #ffffff;
     text-decoration: none;
     border-bottom: 1px solid rgba(255,255,255, 0.4);
-    display: inline-block;
 }
 
-nav a:hover {
+.site-nav a:hover,
+.site-nav a:focus {
     color: #323232;
+    border-bottom: 1px solid #323232;
 }
 
-nav a:active {
+.site-nav a:active {
     box-shadow: inset 0 2px 1px #696969;
     background-color: #ededed;
     background-color: #f8f7f4;
@@ -31,9 +35,9 @@ header ul {
     list-style: none;
 }
 
-header .header-search, 
-       .header-login, 
-       .header-cart {
+.header-search, 
+.header-login, 
+.header-cart {
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -41,18 +45,34 @@ header .header-search,
     color: #ffffff;
 }
 
-header .header-search:hover, 
-       .header-login:hover, 
-       .header-cart:hover {
+.header-search:hover,
+.header-search:focus,
+.header-login:hover,
+.header-login:focus, 
+.header-cart:hover,
+.header-cart:focus {
     color: #323232;
     background-color: #f8f7f4;
 }
 
+.header-search:hover .search-path,
+.header-search:focus .search-path {
+    fill: #323232;
+    stroke: #323232;
+}
+
+a.search-path {
+    fill: #323232;
+    stroke: #323232;
+}
+
 .header-login {
     width: 93px;
-    height: 20px;
+    height: 32px;
 
-    text-align: right   ;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
     vertical-align: middle;
     color: #ffffff;
     font-size: 14px;
@@ -60,7 +80,14 @@ header .header-search:hover,
     background-color: rgba(255,255,255, 0.2);
     border-radius: 50px;
 
-    padding: 6px 16px 6px 0px;
+    padding: 6px 16px;
+    box-sizing: border-box;
+}
+
+a.header-login:hover .login-path,
+a.header-login:focus .login-path  {
+    fill: #323232;
+    stroke: #323232;
 }
 
 .login-path {
@@ -70,14 +97,16 @@ header .header-search:hover,
     margin-right: 30px;
 }
 
-.login-path:hover {
-    fill: #323232;
-    stroke: #323232;
-}
-/* как сделать так, чтобы ховер над svg срабатывал, когда курсор не прямо над ним, а над всей ссылкой? */
-
 .header-cart {
     height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 6px 16px;
+
+    background-color: rgba(255,255,255, 0.2);
+    border-radius: 50px;
 }
 
 header .schedule {
@@ -110,7 +139,6 @@ header .phone-number a {
     display: flex;
     margin: -58px auto 0px auto;
 }
-/* если отрицательный марджин нельзя, то как сделать, чтобы картинка наехала на хэдер? */
 
 .carousel p {
     width: 700px;
@@ -216,7 +244,8 @@ header .phone-number a {
     border-radius: 50px;
 }
 
-.bargain a:hover {
+.bargain a:hover,
+.bargain a:focus {
     color: #ffffff;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     box-shadow: 0 2px 2px #ac1000;
@@ -266,23 +295,106 @@ section.chocolate-bargain {
     border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
-.item-hover {
-    position: absolute;
+.hit-item {
+    position: relative;
+    margin: 0 13px;
+}
+
+.catalog-item-btn a {
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.catalog-item-btn {
     display: none;
-    width: 293px;
-    height: 405px;
-  
+    width: 166px;
+    height: 18px;
+    padding: 13px 17px;
+    margin: 17px auto 22px auto;
+
+    align-self: center;
+
+    border-radius: 50px;
+    box-shadow: 0 1px 2px #ac1000;
+    background-color: #e84d37;
+    background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+
+    z-index: 2;
+}
+
+li.hit-item:hover a.catalog-item-btn, 
+li.catalog-item:hover a.catalog-item-btn {
+    display: block;
+    text-align: center;
+}
+
+li.hit-item:hover, 
+li.catalog-item:hover {
+    margin: 0 0 -94px 0;
+    padding: 0 13px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.08);
     background-color: rgba(248, 247, 244, 0.2);
     border-radius: 5px;
-  
-    z-index: 1;
-  }
 
-.hit-item a:hover {
+    z-index: 2;
+}
+
+
+.hit-item a:hover,
+.hit-item a:focus {
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255,188,158, 0.3);
 }
+
+
+ul.hits-list,
+ul.catalog-list {
+    width: 1185px;
+    margin: 25px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+li.hit-item,
+li.catalog-item {
+    width: 270px;
+    min-height: 322px;
+    margin: 0 13px 20px 13px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+li.catalog-item {
+    margin-bottom: 20px;
+}
+
+div.item-info {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.hit-item .catalog-item-price,
+.catalog-item .catalog-item-price {
+    position: absolute;
+    top: 210px;
+}
+
+.hit-item h3,
+.catalog-item h3 {
+    text-align: center;
+
+    margin: 0 auto;
+}
+
 
 .catalog-item-image a {
     border-bottom: 0px;
@@ -507,11 +619,6 @@ footer ul {
     list-style: none;
 }
 
-footer.social-links {
-    width: 38px;
-    height: 38px;
-}
-
 .footer-nav a {
     font-size: 13px;
     line-height: 18px;
@@ -555,15 +662,22 @@ footer.social-links {
     border-bottom: 1px solid rgba(255,188,158, 0.3);
 }
 
+.catalog-current span {
+    width: 85px;
+}
+
 a.catalog-current {
     width: 87px;
     height: 32px;
-
+    display: inline-flex;
+    align-items: center;
     background-color: #d07058;
+    border-radius: 40px;
 
     font-size: 16px;
     font-weight: 700;
     color: #ffffff;
+    text-align: center;
 
     border-bottom: 0px;
 }
@@ -574,19 +688,33 @@ a.catalog-current:active {
     background-color: #ededed;
     background-color: #f8f7f4;
 }
+.site-nav li a {
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.site-nav li:not(:first-child),
+.site-nav li:not(:first-child) a {
+    height: 17px;
+}
 
 a.header-search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 33px;
     height: 33px;
-    display: inline-block;
 
-    background: url("../img/svg/loupe.svg");
-    background-repeat: no-repeat;
     background-position: 8px 8px;
     background-color: rgba(250, 250, 250, 0.2);
     border-radius: 50%;
 }
-/* цвет svg при наведении не поменять - надо сделать path в html? */
+
+.search-svg path {
+    fill: #ffffff;
+    stroke: #ffffff;
+}
 
 a.cart-active {
     min-width: 101px;
@@ -618,7 +746,8 @@ a.cart-active {
     border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
-.breadcrumbs a:hover:not(.breadcrumbs-current) {
+.breadcrumbs a:hover:not(.breadcrumbs-current),
+.breadcrumbs a:focus:not(.breadcrumbs-current) {
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255,188,158, 0.3);
 }
@@ -638,11 +767,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-}
-
-label:hover,
-label:focus {
-  color: #323232;
 }
 
 .filter-input:disabled + label {
@@ -670,7 +794,6 @@ fieldset {
     font-weight: 500;
     line-height: 18px;
 
-    background-image: url("../img/svg/select-arrow.svg");
     background-repeat: no-repeat;
     
     background-position-x: 90%;
@@ -680,7 +803,31 @@ fieldset {
     border-radius: 40px;
 }
 
-.filter-select:hover {
+.filter-select-wrapper {
+    position: relative;
+}
+
+.filter-select:hover + .select-arrow path,
+.filter-select:focus + .select-arrow path {
+    fill: #323232;
+    stroke: #323232;
+}
+
+.select-arrow {
+    position: absolute;
+    top: 17px;
+    right: 15px;
+    fill: #ffffff;
+    stroke: #ffffff;
+}
+
+.select-arrow path {
+    fill: #ffffff;
+    stroke: #ffffff;
+}
+
+.filter-select:hover,
+.filter-select:focus {
     color: #323232;
 }
 
@@ -734,7 +881,15 @@ fieldset ul {
     background-color: rgba(255,255,255, 0.2);
 }
 
-.item-filter button:hover {
+.filter-input:focus + .fat-value,
+.filter-input:hover + .fat-value,
+.filter-input:focus + .filling-value,
+.filter-input:hover + .filling-value {
+    color: #323232;
+}
+
+.item-filter button:hover,
+.item-filter button:focus {
     color: #323232;
     background-color: #ffffff;
 }
@@ -782,7 +937,6 @@ span.weight {
     line-height: 45px;
 }
 
-
 .modal,
 .search,
 .login,
@@ -824,24 +978,30 @@ footer {
     padding-left: 27px;
 }
 
+.site-navigation ul.main-page-nav li, 
+.site-navigation ul.main-page-nav li a {
+    height: 18px;
+}
+
 .site-navigation nav ul {
-    width: 400px;
     height: 50px;
+
+    padding: 0;
 
     display: flex;
     justify-content: space-around;
-
-    padding-left: 10px; 
 }
 
 .site-navigation nav ul li {
-    height: 20px;
+    height: 32px;
 
-    margin: auto;
+    margin: auto 0;
 }
 
 .user-navigation {
-    width: 300px;
+    width: 270px;
+
+    margin: 10px 20px 0 0;
 
     justify-content: flex-end;
     align-items: center;
@@ -990,6 +1150,21 @@ ul.social {
     padding: 0px;
 }
 
+ul.social img {
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,.2);
+    opacity: .8;
+}
+
+ul.social img:hover {
+    border: 3px solid rgba(255,255,255,.7);
+    opacity: 1;
+}
+
+ul.social img:active {
+    opacity: .8;
+}
+
 ul.footer-nav {
     width: 326px;
     height: 40px;
@@ -1014,117 +1189,69 @@ ul.footer-nav {
     padding: 0px;
 }
 
-ul.hits-list,
-ul.catalog-list {
+.pagination-wrapper {
+    width: 100%;
+    text-align: right;
+    text-align: -moz-right;
+}
+
+.pagination,
+.pagination ol {
+    list-style: none;
+
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: baseline;
 
     padding: 0;
 }
 
-li.hit-item,
-li.catalog-item {
-    width: 270px;
-    min-height: 322px;
-
-    display: flex;
-    flex-direction: column-reverse;
-
-    position: relative;
-}
-
-.hit-item .catalog-item-price,
-.catalog-item .catalog-item-price {
-    position: absolute;
-    top: 210px;
-}
-
-.hit-item h3,
-.catalog-item h3 {
-    text-align: center;
-
-    margin: 0 auto;
-}
-
 .pagination {
-    min-width: 190px;
+    width: 190px;
+}
+
+.pagination ol {
+    width: 140px;
+    height: 26px;
+}
+
+.pagination li {
     height: 26px;
 
-    display: flex;
-    justify-content: flex-end;
-}
-
-.pagination-item {
-    margin-right: 15px;
-}
-
-.pagination-item:last-child {
-    margin-right: 0;
-  }
-
-.pagination {
-    margin: 0;
-    padding: 0;
-    
-    display: flex;
-    flex-wrap: wrap;
-
-    list-style: none;
-}
-
-
-.prev, 
-.next {
-    text-indent: -9999px;
-    background: url("../img/svg/icon-right-small.svg");
-    background-repeat: no-repeat;
-    background-position: 0 3px;
-}
-
-.prev {
-    transform: scaleX(-1);
-}
-
-.pagination a {
-    display: block;
-    min-width: 20px;
-    height: 40px;
-    padding: 10px 10px;
-
-    text-align: center;
     vertical-align: middle;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pagination ol li {
+    width: 26px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.pagination ol a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
+    width: 100%;
+    text-align: center;
 }
 
-.pagination a:hover {
-    width: 27px;
+.pagination ol li:hover {
+    background: rgba(255,255,255, 0.2);
+}
+
+.pagination ol a.current-page {
+    width: 26px;
     height: 26px;
 
-    background: rgba(255,255,255, 0.2);
-    border-radius: 40px;
-}
-
-.pagination-item a:hover,
-.pagination-item a:focus,
-.pagination-item a:active {
-    background: rgba(255,255,255, 0.2);
-    border-radius: 20px;
-}
-
-.pagination-current span {
-    display: inline-block;
-    height: 27px;
-    width: 26px;
-
+    line-height: 26px;
+    background: #ffffff;
+    border-radius: 50px;
     color: #323232;
-    background-color: #ffffff;
-    background-position: center top;/* какк двинуть кругляшок выше? */
+    text-align: center;
+}
 
-    border-radius:40px;
+.pagination .prev {
+    transform: scaleX(-1);
+    opacity: 0.2;
 }

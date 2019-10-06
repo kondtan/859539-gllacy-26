@@ -14,8 +14,8 @@
           <a>
             <img src="img/gllacy-logo.png" alt="Логотип GllacyShop">
           </a>
-        <nav>
-          <ul>
+        <nav class="site-nav">
+          <ul class="main-page-nav">
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="">Доставка и оплата</a></li>
             <li><a href="">О Компании</a></li>
@@ -23,7 +23,31 @@
         </nav>
         </div>
         <div class="user-navigation">
-          <a class="header-search" href="search.html"><span class="visually-hidden">Поиск</span></a>
+          <a class="header-search" href="search.html">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            width="17px" height="17px"
+            viewBox="0 0 17 17">
+            <path class="search-path" fill="white" stroke="white" stroke-width="0.6"
+               d="M 16.96,15.53
+                  C 16.96,15.53 11.75,10.32 11.75,10.32
+                    12.54,9.25 13.00,7.93 13.00,6.50
+                    13.00,6.50 13.00,6.50 13.00,6.50
+                    13.00,6.50 13.00,6.50 13.00,6.50
+                    13.00,2.91 10.09,-0.00 6.50,0.00
+                    2.91,0.00 0.00,2.91 0.00,6.50
+                    0.00,10.09 2.91,13.00 6.50,13.00
+                    6.50,13.00 6.50,13.00 6.50,13.00
+                    7.94,13.00 9.27,12.53 10.34,11.74
+                    10.34,11.74 15.54,16.94 15.54,16.94
+                    15.54,16.94 16.96,15.53 16.96,15.53 Z
+                  M 6.50,11.00
+                  C 4.02,11.00 2.00,8.98 2.00,6.50
+                    2.00,4.02 4.02,2.00 6.50,2.00
+                    8.98,2.00 11.00,4.02 11.00,6.50
+                    11.00,8.98 8.98,11.00 6.50,11.00 Z" />
+              </svg>
+              <span class="visually-hidden">Поиск</span></a>
+
           <a class="header-login" href="login.html">
               <svg xmlns="http://www.w3.org/2000/svg"
               width="0.233333in" height="0.211111in"
@@ -92,26 +116,27 @@
         <h2 class="visually-hidden">Хиты продаж</h2>
           <ul class="hits-list">
               <li class="hit-item">
-                <h3>
-                   <a href="">
-                     Сливочное с апельсиновым джемом и цитрусовой стружкой
-                   </a>
-                </h3>
-                <p class="catalog-item-image">
-                   <a href="">
-                       <img src="img/orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                <div class="item-info">
+                  <h3>
+                    <a href="">
+                      Сливочное с апельсиновым джемом и цитрусовой стружкой
                     </a>
-                </p>
-                <p class="catalog-item-price">
-                    <span>310</span>
-                    <span class="weight">/кг</span>
-                </p>
-                <div class="item-hover">
-                  <a href="" class="catalog-item-preview">Быстрый просмотр</a>
+                  </h3>
+                  <p class="catalog-item-image">
+                    <a href="">
+                        <img src="img/orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                      </a>
+                  </p>
+                  <p class="catalog-item-price">
+                      <span>310</span>
+                      <span class="weight">/кг</span>
+                  </p>
                 </div>
-                </li>
-               
+                  <a href="" class="catalog-item-btn">Быстрый просмотр</a>
+               </li>
+              
                <li class="hit-item">
+                <div class="item-info">
                 <h3>
                    <a href="">
                     Сливочно-кофейное с кусочками шоколада  
@@ -126,9 +151,12 @@
                     <span>380</span>
                     <span class="weight">/кг</span>
                 </p>
+                </div>
+                <a href="" class="catalog-item-btn">Быстрый просмотр</a>
               </li>
     
               <li class="hit-item">
+                <div class="item-info">
                 <h3>
                    <a href="">
                     Сливочно-клубничное с присыпкой&nbsp;из белого шоколада
@@ -143,9 +171,12 @@
                     <span>355</span>
                     <span class="weight">/кг</span>
                 </p>
+                </div>
+                <a href="" class="catalog-item-btn">Быстрый просмотр</a>
               </li>
     
               <li class="hit-item">
+                <div class="item-info">
                 <h3>
                    <a href="">
                     Сливочное крем-брюле с карамельной подливкой
@@ -160,6 +191,8 @@
                     <span>415</span>
                     <span class="weight">/кг</span>
                 </p>
+                </div>
+                <a href="" class="catalog-item-btn">Быстрый просмотр</a>
               </li>
             </ul>
       </section>  
