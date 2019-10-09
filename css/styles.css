@@ -61,11 +61,6 @@ header ul {
     stroke: #323232;
 }
 
-a.search-path {
-    fill: #323232;
-    stroke: #323232;
-}
-
 .header-login {
     width: 93px;
     height: 32px;
@@ -135,6 +130,7 @@ header .phone-number a {
     margin: -1px;
   }
 
+  /* убрать -марджин */
 .carousel img {
     display: flex;
     margin: -58px auto 0px auto;
@@ -201,8 +197,7 @@ header .phone-number a {
 .bargain h3 {
     margin-top: 15px;
     margin-left: 18px;
-    margin-bottom: 0px;
-
+    margin-bottom: 0;
     font-size: 35px;
     font-weight: 700;
     line-height: 41px;
@@ -230,7 +225,7 @@ header .phone-number a {
     padding: 10px 24px;
     margin-top: 25px;
     margin-right: 21px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 
     font-size: 18px;
     font-weight: 700;
@@ -301,7 +296,6 @@ section.chocolate-bargain {
 }
 
 .catalog-item-btn a {
-
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -397,7 +391,7 @@ div.item-info {
 
 
 .catalog-item-image a {
-    border-bottom: 0px;
+    border-bottom: 0;
 }
 
 .catalog-item-image img {
@@ -546,7 +540,7 @@ div.subscribe-form-light {
     height: 305px;
     background-color: #ffffff;
 
-        text-align: left;
+    text-align: left;
     border-radius: 15px;
 }
 
@@ -679,7 +673,7 @@ a.catalog-current {
     color: #ffffff;
     text-align: center;
 
-    border-bottom: 0px;
+    border-bottom: 0;
 }
 
 a.catalog-current:active {
@@ -731,7 +725,7 @@ a.cart-active {
     background-color: #f8f7f4;
     border-radius: 50px;
 
-    padding: 6px 16px 6px 0px;
+    padding: 6px 16px 6px 0;
 }
 
 .breadcrumbs li {
@@ -753,7 +747,7 @@ a.cart-active {
 }
 
 a.breadcrumbs-current {
-    border-bottom: 0px;
+    border-bottom: 0;
 }
 
 h1 {
@@ -856,12 +850,12 @@ fieldset ul {
     border-radius: 40px;
 
     padding: 10px 17px;
-    margin: 0px;
+    margin: 0;
 
 }
 .fat {
     width: 415px;
-    margin: 0px;
+    margin: 0;
 }
 
 .filling {
@@ -914,11 +908,11 @@ fieldset ul {
 }
 
 .catalog-item-image a {
-    border-bottom: 0px;
+    border-bottom: 0;
 }
 
 .catalog-item-image a:hover {
-    border-bottom: 0px;
+    border-bottom: 0;
 }
 
 ul.catalog-list {
@@ -1035,10 +1029,10 @@ header {
 ul.breadcrumbs {
     display: flex;
 
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 30px;
-    padding: 0px;
+    padding: 0;
 
     position: absolute;
     top: 100px;
@@ -1147,13 +1141,13 @@ ul.social {
 
     margin-top: 40px;
     margin-left: 28px;
-    padding: 0px;
+    padding: 0;
 }
 
 ul.social img {
     border-radius: 50%;
     border: 3px solid rgba(255,255,255,.2);
-    opacity: .8;
+    opacity: 0.8;
 }
 
 ul.social img:hover {
@@ -1162,7 +1156,7 @@ ul.social img:hover {
 }
 
 ul.social img:active {
-    opacity: .8;
+    opacity: 0.8;
 }
 
 ul.footer-nav {
@@ -1174,7 +1168,7 @@ ul.footer-nav {
     flex-wrap: wrap;
 
     margin-top: 36px;
-    padding: 0px;
+    padding: 0;
 }
 
 .made-in {
@@ -1186,7 +1180,7 @@ ul.footer-nav {
 
     margin-top: 20px;
     margin-right: 25px;
-    padding: 0px;
+    padding: 0;
 }
 
 .pagination-wrapper {
