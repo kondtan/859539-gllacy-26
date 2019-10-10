@@ -472,25 +472,30 @@
     </div>
   </footer>
 
+  
   <section class="cart">
-    <table>
+  <div class="cart-wrapper">
+    <table class="cart-items">
       <tr>
-        <td><button type="button">Удалить товар</button></td> 
-        <td><img src="img/cart-item1.jpg" alt="Пломбир с апельсиновым джемом"></td>
-        <td>Пломбир с апельсиновым джемом</td>
-        <td>1,5 кг х 200 руб.</td>
-        <td>300 руб.</td>
+        <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
+        <td class="cart-item-preview"><img src="img/cart-item1.jpg" alt="Пломбир с апельсиновым джемом"></td>
+        <td class="cart-item-name">Пломбир с апельсиновым джемом</td>
+        <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">200 руб.</span></td>
+        <td class="cart-item-total">300 руб.</td>
       </tr>
       <tr>
-        <td><button type="button">Удалить товар</button></td> 
-        <td><img src="img/cart-item2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-        <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-        <td>1,5 кг х 300 руб.</td>
-        <td>450 руб.</td>
+        <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
+        <td class="cart-item-preview"><img src="img/cart-item2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+        <td class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+        <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">300 руб.</span></td>
+        <td class="cart-item-total">450 руб.</td>
       </tr>
     </table>
-    <p>Итого: 750 руб.</p>
-    <button type="submit">Оформить заказ</button>
+    <div class="total-submission">
+      <p class="cart-total">Итого: 750 руб.</p>
+      <button class="place-order" type="submit">Оформить заказ</button>
+    </div>
+  </div>
   </section>
  
   </body>

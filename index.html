@@ -286,27 +286,29 @@
     </footer>
 
     <div class="modal feedback">
-      <p>Мы обязательно вам ответим!</p>
-      <form>
-        <p>
+      <p class="feedback-text">Мы обязательно вам ответим!</p>
+        <form>
+        <p class="feedback-name">
           <label class="visually-hidden" for="submission-username">Введите имя и фамилию</label>
           <input id="submission-username" type="text" name="name" placeholder="Имя Фамилия">
         </p>
-        <p>
+        <p class="feedback-email">
           <label class="visually-hidden" for="submission-email">Введите email</label>
           <input id="submission-email" type="email" name="email" placeholder="email@example.com">
         </p>
-        <p>
+        <p class="feedback-body">
           <label class="visually-hidden" for="submission-contents">Ваш вопрос в свободной форме</label>
-          <input id="submission-contents" type="text" name="contents" placeholder="В свободной форме">
+          <textarea id="submission-contents" type="text" name="contents" placeholder="В свободной форме"></textarea>
         </p>
-        <button type="submit" value="Отправить">Отправить</button>
-      </form>
-      <button class="modal-close" type="button" value="Закрыть">Закрыть</button>
+        <div class="send-wrapper">
+          <button class="send-btn" type="submit" value="Отправить">
+              Отправить
+          </button>
+        </div>          
+        </form>
+      <button class="modal-close" type="button" value="Закрыть"><span class="visually-hidden">Закрыть</span></button>
     </div>
 
-    <!-- убрать див? -->
-    <div>
     <form class="search">
       <p>
         <label class="visually-hidden" for="search">Поиск</label>
@@ -314,32 +316,33 @@
       </p>
       <button class="visually-hidden" type="submit" value="Поиск">Поиск</button>
     </form>
-    </div>
 
     <div class="login">
       <h2 class="visually-hidden">Личный кабинет</h2>
       <form>
-        <p>
+        <p class="login-email">
           <label class="visually-hidden" for="user-login">Логин</label>
           <input id="user-login" type="text" name="login" placeholder="email@example.com">
         </p>
-        <p>
+        <p class="login-password">
           <label class="visually-hidden" for="user-password">Пароль</label>
           <input id="user-password" type="password" name="password" placeholder="••••••••">
         </p>
-        <p>
+        <div class="login-bottom-wrapper">
+        <p class="login-links">
           <a class="restore" href="">Забыли пароль?</a> 
           <a class="new-member" href="">Новая регистрация</a>
         </p>
         <button type="submit">Войти</button>
+      </div>
       </form>
     </div>
 
-    <div>
-    <ul class="catalogue catalogue-dropdown">
+    <div class="catalog-dropdown-wrapper">
+    <ul class="catalog catalog-dropdown">
       <li><a href="">Новинки</a></li>
       <li><a href="">Сливочное</a></li>
-      <li><a href="">Щербеты</a></li>
+      <li class="current"><a href="">Щербеты</a></li>
       <li><a href="">Фруктовый лед</a></li>
       <li><a href="">Мелорин</a></li>
    </ul>
