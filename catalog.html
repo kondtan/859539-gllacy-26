@@ -7,24 +7,24 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <title>Каталог магазина Глейси</title>
   </head>
-  <body>
-    <header>
+  <body class="catalog-background">
+    <header class="catalog-header">
       <div class="main-navigation">
         <div class="site-navigation"> 
-        <a>
-          <img src="img/gllacy-logo.png" alt="Логотип GllacyShop">
-        </a>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="" class="catalog-current"><span>Каталог</span></a></li>
-          <li><a href="">Доставка и оплата</a></li>
-          <li><a href="">О Компании</a></li>
-        </ul>
-      </nav>
-      </div>
-      <div class="user-navigation">
-        <a class="header-search" href="search.html">
-        <svg xmlns="http://www.w3.org/2000/svg"
+          <a>
+            <img src="img/gllacy-logo.png" alt="Логотип GllacyShop">
+          </a>
+          <nav class="site-nav">
+            <ul class="main-page-nav">
+              <li><a href="" class="catalog-current"><span>Каталог</span></a></li>
+              <li><a href="">Доставка и оплата</a></li>
+              <li><a href="">О Компании</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="user-navigation">
+          <a class="header-search" href="search.html">
+          <svg xmlns="http://www.w3.org/2000/svg"
         width="17px" height="17px"
         viewBox="0 0 17 17">
         <path class="search-path" fill="white" stroke="white" stroke-width="0.6"
@@ -46,10 +46,11 @@
                 8.98,2.00 11.00,4.02 11.00,6.50
                 11.00,8.98 8.98,11.00 6.50,11.00 Z" />
           </svg>
-          <span class="visually-hidden">Поиск</span></a>
+            <span class="visually-hidden">Поиск</span>
+          </a>
 
           <a class="header-login" href="login.html">
-              <svg xmlns="http://www.w3.org/2000/svg"
+            <svg xmlns="http://www.w3.org/2000/svg"
               width="0.233333in" height="0.211111in"
               viewBox="0 0 21 19">
            <path class="login-path"
@@ -79,8 +80,7 @@
                       -0.04,7.04 -0.04,11.96 -0.04,11.96
                       -0.04,11.96 6.00,11.96 6.00,11.96
                       6.00,11.96 6.00,14.88 6.00,14.88 Z" />
-         </svg>
-         Вход</a>
+            </svg>Вход</a>
         <a class="header-cart cart-active" href="cart.html">2 товара</a>
       </div>
       </div>
@@ -94,8 +94,8 @@
         <li><a class="breadcrumbs-current" href="#">Сливочное</a></li>
       </ul>
     </header>
-    <main>
-      <h1>Сливочное мороженое</h1>
+    <main class="catalog-main">
+      <h1 class="catalog-title">Сливочное мороженое</h1>
       <div class="item-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <fieldset class="popularity">
@@ -118,29 +118,45 @@
         </fieldset>
         <fieldset class="price">
           <legend>Цена: 100 руб. – 500 руб.</legend>
-          <span>*price range*</span>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+          </div>
         </fieldset>
         <fieldset class="fat">
           <legend>Жирность:</legend>
           <ul>
             <li class="filter-option">
-              <label>
-              <input class="filter-input filter-input-radio" type="radio" name="product-group" value="zero-percent">
-              <span class="fat-value">0%</span></label> 
+              <label class="radio">
+                <input class="filter-input filter-input-radio" type="radio" name="product-group" value="zero-percent" disabled checked>
+                <span class="radio-button"></span>
+                <span class="fat-value">0%</span>
+              </label>               
             </li>
             <li class="filter-option">
               <label>
-              <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-ten-percent" checked><span class="fat-value">до 10%</span></label> 
+                <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-ten-percent">
+                <span class="radio-button"></span>
+                <span class="fat-value">до 10%</span> 
+              </label>
             </li>
             <li class="filter-option">
               <label>
-              <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-30-percent">
-              <span class="fat-value">до 30%</span></label> 
+                <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-30-percent">
+                <span class="radio-button"></span>
+                <span class="fat-value">до 30%</span> 
+              </label>
             </li>
             <li class="filter-option">
               <label>
-              <input class="filter-input filter-input-radio" type="radio" name="product-group" value="above-30-percent">
-              <span class="fat-value">выше 30%</span>
+                <input class="filter-input filter-input-radio" type="radio" name="product-group" value="above-30-percent">
+                <span class="radio-button"></span>
+                <span class="fat-value">выше 30%</span>
               </label> 
             </li>
           </ul>
@@ -150,32 +166,37 @@
           <legend>Наполнители:</legend>
           <ul class="filling-checkbox">
             <li>
-              <label>
-              <input class="filter-input" name="chocolate-filling" type="checkbox" checked>
-              <span class="filling-value">шоколадные</span>
+              <label class="check">
+                <input class="check-input" name="chocolate-filling" type="checkbox" checked>
+                <span class="check-box"></span>
+                <span class="filling-value">шоколадные</span>
               </label>
             </li>
             <li>
               <label>
-              <input class="filter-input" name="sprinkles-filling" type="checkbox" checked>
-              <span class="filling-value">сахарные присыпки</span>
+                <input class="check-input" name="sprinkles-filling" type="checkbox" checked disabled>
+                <span class="check-box"></span>
+                <span class="filling-value">сахарные присыпки</span>
               </label>
             </li>
             <li>
               <label>
-              <input class="filter-input" name="fruit-filling" type="checkbox">
+              <input class="check-input" name="fruit-filling" type="checkbox" disabled>
+              <span class="check-box"></span>
               <span class="filling-value">фрукты</span>
               </label>
             </li>
             <li>
               <label>
-              <input class="filter-input" name="syrup-filling" type="checkbox">
+              <input class="check-input" name="syrup-filling" type="checkbox">
+              <span class="check-box"></span>
               <span class="filling-value">сиропы</span>
               </label>
             </li>
             <li>
               <label>
-              <input class="filter-input" name="jam-filling" type="checkbox">
+              <input class="check-input" name="jam-filling" type="checkbox">
+              <span class="check-box"></span>
               <span class="filling-value">джемы</span>
               </label>
             </li>
@@ -199,7 +220,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>310</span>
+              <span>310₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -219,7 +240,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>380</span>
+              <span>380₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -239,7 +260,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>355</span>
+              <span>355₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -259,7 +280,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>415</span>
+              <span>415₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -279,7 +300,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>325</span>
+              <span>325₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -299,7 +320,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>410</span>
+              <span>410₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -319,7 +340,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>375</span>
+              <span>375₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -340,7 +361,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>320</span>
+              <span>320₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -360,7 +381,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>440</span>
+              <span>440₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -380,7 +401,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>435</span>
+              <span>435₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -400,7 +421,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <span>355</span>
+              <span>355₽</span>
               <span class="weight">/кг</span>
             </p>
           </div>
@@ -420,7 +441,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-                <span>420</span>
+                <span>420₽</span>
                 <span class="weight">/кг</span>
             </p>
           </div>
@@ -435,7 +456,7 @@
           </a></li>
           <li>
             <ol>
-              <li><a href="" class="pagination-item current-page"><span>1</spa></a></li>
+              <li><a href="" class="pagination-item current-page"><span>1</span></a></li>
               <li><a href="" class="pagination-item">2</a></li>
               <li><a href="" class="pagination-item">3</a></li>
               <li><a href="" class="pagination-item">4</a></li>
@@ -465,9 +486,9 @@
         <li><a href="">Экологические стандарты</a></li>
       </ul>
 
-      <div class="made-in">
+      <div class="made-in-logo">
         <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
-        <div class="made-in-wrapper">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019</div>
+        <div class="made-in">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019</div>
       </div>
     </div>
   </footer>
