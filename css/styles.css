@@ -12,6 +12,11 @@ body {
     line-height: 18px;
 }
 
+.main-nav-item {
+    border-radius: 40px;
+    padding: 10px 10px;
+}
+
 .site-nav a {
     color: #ffffff;
     text-decoration: none;
@@ -25,6 +30,7 @@ body {
 }
 
 .site-nav a:active {
+    border-radius: 40px;
     box-shadow: inset 0 2px 1px #696969;
     background-color: #ededed;
     background-color: #f8f7f4;
@@ -61,6 +67,7 @@ header ul {
 }
 
 .header-login {
+    position: relative;
     width: 93px;
     height: 32px;
 
@@ -1244,13 +1251,14 @@ span.weight {
     line-height: 45px;
 }
 
-/* .modal,
+/* .modal, */
+.transparent-background,
 .search,
-.login,/*
-.catalogue-dropdown,
+.modal-login,
+ul.catalog-dropdown,
 .cart {
     display: none;
-}  */
+}
 
 header,
 main,
@@ -1287,6 +1295,7 @@ footer {
 .index-header ul.main-page-nav li, 
 .index-header ul.main-page-nav li a {
     height: 18px;
+    position: relative;
 }
 
 .main-page-nav {
@@ -1296,7 +1305,7 @@ footer {
     width: 380px;
 }
 
-.site-navigation ul {
+.site-navigation ul.main-page-nav {
     height: 45px;
     width: 375px;
 
@@ -1314,6 +1323,8 @@ footer {
 }
 
 .user-navigation {
+    position: relative;
+
     width: 255px;
 
     margin: 7px 21px 0 0;
@@ -1707,13 +1718,29 @@ form.search input {
     border-radius: 5px;
 }
 
-/* левый margin специально прописан модальным элементам, чтобы отлепить их от края и нормально посмотреть */
-.modal {
+.modal-show-feedback {
+    display: block;
+    position: fixed;
+    top: 0;
+}
+
+.animated-entrance {
+    animation: bounce 0.8s;
+    animation-iteration-count: 1;
+}
+
+.transparent-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1,1,1,0.5);
+}
+
+.feedback {
     position: relative;
     width: 478px;
     height: 443px;
-
-margin-left: 300px;
+    margin: auto;
+    margin-top: 5%;
     padding-top: 15px;
     padding-left: 22px;
 
@@ -1791,15 +1818,15 @@ p.feedback-text {
 
 .send-btn:hover,
 .send-btn:focus,
-.login button:hover,
-.login button:focus {
+.modal-login button:hover,
+.modal-login button:focus {
     box-shadow: 0 2px 2px #ac1000;
     background-color: #ef7861;
     background-image: linear-gradient(to top, #dd7663 0%, #f48468d3 100%);
 }
 
 .send-btn:active,
-.login button:active {
+.modal-login button:active {
     box-shadow: inset 0 2px 2px #942718;
     background-color: rgba(0, 0, 0, 0.07);
     background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
@@ -1821,21 +1848,73 @@ p.feedback-text {
     border: none;
 }
 
-div.login {
+.modal-show-login {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 115px;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-15px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(15px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+div.modal-login {
     width: 277px;
     height: 214px;
-margin-left: 600px; 
+    
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
     border-radius: 5px;
+    z-index: 999;
 }
 
-.login form {
+.modal-login form {
     padding-top: 10px;
     padding-left: 17px; 
 }
 
-.login input {
+.modal-login input {
     display: block;
     width: 226px;
     min-height: 40px;
@@ -1859,7 +1938,7 @@ margin-left: 600px;
     margin-bottom: 20px;
 }
 
-.login a {
+.modal-login a {
     font-size: 13px;
     font-weight: 400;
     line-height: 17px;
@@ -1884,7 +1963,7 @@ p.login-links {
     margin: 0;
 }
 
-.login button {
+.modal-login button {
     width: 100px;
     height: 44px;
 
@@ -1903,24 +1982,24 @@ p.login-links {
     background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
 }
 
-.catalog-dropdown-wrapper {
+.catalog-dropdown {
+    display: block;
+    position: absolute;
+
     width: 143px;
     height: 171px;
+    top: 37px;
+    z-index: 999;
 
-    margin-left: 200px;
-    margin-bottom: 200px;
+    padding-left: 0;
 
+    list-style: none;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
     border-radius: 5px;
 }
 
-ul.catalog-dropdown {
-    list-style: none;
-    padding-left: 0;
-}
-
-.catalog-dropdown li {
+ul.catalog-dropdown li.dropdown-item {
     width: 100%;
     height: 31px; 
 
@@ -1928,8 +2007,27 @@ ul.catalog-dropdown {
     flex-direction: column;
     justify-content: space-around; 
 }
+/* 
+как сделать внутренние отступы у первых трех ссылок главного меню? (серый фон состояния :active)
+из-за бордера ссылок не получится использовать паддинги, попыталась через псевдоэлемент
+.site-nav a:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 2px;
+    background-color: black;
+}
+ */
 
-.catalog-dropdown li:first-child {
+ul.catalog-dropdown li a {
+    border-bottom: none;
+}
+ul.catalog-dropdown li a:active {
+    box-shadow: none;
+    background-color: inherit;
+}
+ul.catalog-dropdown li.dropdown-item:first-child {
     height: 27px;
 
     padding-top: 10px;
@@ -1938,8 +2036,9 @@ ul.catalog-dropdown {
     border-top-right-radius: 5px;
 }
 
-.catalog-dropdown a {
+ul.catalog-dropdown li.dropdown-item a {
     width: 116px;
+    height: 31px;
 
     margin: auto;
     padding-left: 12px;
@@ -1968,14 +2067,25 @@ ul.catalog-dropdown {
 .catalog-dropdown li:hover,
 .catalog-dropdown li:focus-within  {
     background-color: #fbded7;
+    color: inherit;
 }
 
 .catalog-dropdown li:active {
     background-color: #f6b5a5;
 }
 
-.catalog-dropdown li.current {
-    background-color: #d07058;
+.catalog-dropdown li.current:hover {
+    background-color: #fbded7;
+}
+
+.catalog-current li.current:active {
+    background-color: #f6b5a5;
+}
+
+.catalog-dropdown li a:hover,
+.catalog-dropdown li a:focus {
+    color: inherit;
+    border-bottom: none;
 }
 
 li.current a {
