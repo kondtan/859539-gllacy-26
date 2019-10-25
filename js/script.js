@@ -1,25 +1,27 @@
 var headerLogin = document.querySelector(".header-login");
 var feedbackLink = document.querySelector(".feedback-form");
 
-var loginPopup = document.querySelector(".modal-login");
-var feedbackPopup = document.querySelector(".modal");
-var feedbackContainer = document.querySelector(".feedback");
-var feedbackClose = feedbackPopup.querySelector(".modal-close");
-
-var form = loginPopup.querySelector("form");
-var login = loginPopup.querySelector("[name=login]");
-var password = loginPopup.querySelector("[name=password]");
-
-var feedbackForm = feedbackPopup.querySelector("form");
-var feedbackName = feedbackPopup.querySelector("[name=name]");
-var feedbackEmail = feedbackPopup.querySelector("[name=email]");
-var feedbackContents = feedbackPopup.querySelector("[name=contents]");
-var submitButton = feedbackPopup.querySelector("button");
-
 var isStorageSupport = true;
 var storageLogin = "";
 var storageEmail = "";
 var storageName = "";
+
+var loginPopup = document.querySelector(".modal-login");
+var form = loginPopup.querySelector("form");
+var login = loginPopup.querySelector("[name=login]");
+var password = loginPopup.querySelector("[name=password]");
+
+var feedbackPopup = document.querySelector(".modal");
+if (feedbackPopup) {
+    var feedbackContainer = document.querySelector(".feedback");
+    var feedbackClose = feedbackPopup.querySelector(".modal-close");
+
+    var feedbackForm = feedbackPopup.querySelector("form");
+    var feedbackName = feedbackPopup.querySelector("[name=name]");
+    var feedbackEmail = feedbackPopup.querySelector("[name=email]");
+    var feedbackContents = feedbackPopup.querySelector("[name=contents]");
+    var submitButton = feedbackPopup.querySelector("button");
+};
 
 try {
     storageLogin = localStorage.getItem("login");

@@ -641,15 +641,35 @@ section.address {
     left: 265px;
 }
 
-.address-feedback {
+iframe {
+    width: 100%;
+    height: 430px;
+
+    position: relative;
+    z-index: 2;
+    border: none;
+}
+
+div.map {
     position: absolute;
-    top: 60px;
-    right: 27px;
-    display: inline-block;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.address-feedback {
     width: 277px;
     height: 290px;
+
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    top: 60px;
+    right: 27px;
+    
     padding-top: 15px;
     padding-left: 25px;
+
     background-color: #ffffff;
     text-align: left;
     border-radius: 15px;
@@ -1566,6 +1586,7 @@ form.search input {
 .modal-show-feedback {
     display: block;
     position: fixed;
+    z-index: 3;
     top: 0;
 }
 
@@ -1831,7 +1852,7 @@ p.login-links {
 ul.catalog-dropdown li.dropdown-item {
     width: 100%;
     height: 31px;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
