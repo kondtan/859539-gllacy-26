@@ -16,9 +16,15 @@
           </a>
           <nav class="site-nav">
             <ul class="main-page-nav">
-              <li><a href="" class="catalog-current"><span>Каталог</span></a></li>
-              <li><a href="">Доставка и оплата</a></li>
-              <li><a href="">О Компании</a></li>
+              <li class="main-nav-item">
+                <a href="" class="catalog-current top-level-link"><span>Каталог</span></a>
+              </li>
+              <li class="main-nav-item">
+                <a href="" class="top-level-link">Доставка и оплата</a>
+              </li>
+              <li class="main-nav-item">
+                <a href=""class="top-level-link">О Компании</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -81,6 +87,26 @@
                       -0.04,11.96 6.00,11.96 6.00,11.96
                       6.00,11.96 6.00,14.88 6.00,14.88 Z" />
             </svg>Вход</a>
+            <div class="modal-login">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <form>
+                <p class="login-email">
+                  <label class="visually-hidden" for="user-login">Логин</label>
+                  <input id="user-login" type="text" name="login" placeholder="email@example.com">
+                </p>
+                <p class="login-password">
+                  <label class="visually-hidden" for="user-password">Пароль</label>
+                  <input id="user-password" type="password" name="password" placeholder="••••••••">
+                </p>
+                <div class="login-bottom-wrapper">
+                  <p class="login-links">
+                    <a class="restore" href="">Забыли пароль?</a>
+                    <a class="new-member" href="">Новая регистрация</a>
+                  </p>
+                  <button type="submit">Войти</button>
+                </div>
+              </form>
+            </div>
         <a class="header-cart cart-active" href="cart.html">2 товара</a>
       </div>
       </div>

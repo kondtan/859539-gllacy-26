@@ -1,47 +1,48 @@
-var link = document.querySelector(".header-login");
+var headerLogin = document.querySelector(".header-login");
+var feedbackLink = document.querySelector(".feedback-form");
 
-var popup = document.querySelector(".modal-login");
+var loginPopup = document.querySelector(".modal-login");
+var feedbackPopup = document.querySelector(".modal");
+var feedbackContainer = document.querySelector(".feedback");
+var feedbackClose = feedbackPopup.querySelector(".modal-close");
 
-var form = popup.querySelector("form");
-var login = popup.querySelector("[name=login]");
-var password = popup.querySelector("[name=password]");
+var form = loginPopup.querySelector("form");
+var login = loginPopup.querySelector("[name=login]");
+var password = loginPopup.querySelector("[name=password]");
+
+var feedbackForm = feedbackPopup.querySelector("form");
+var feedbackName = feedbackPopup.querySelector("[name=name]");
+var feedbackEmail = feedbackPopup.querySelector("[name=email]");
+var feedbackContents = feedbackPopup.querySelector("[name=contents]");
+var submitButton = feedbackPopup.querySelector("button");
 
 var isStorageSupport = true;
-var storage = "";
+var storageLogin = "";
+var storageEmail = "";
+var storageName = "";
 
 try {
-    storage = localStorage.getItem("login");
+    storageLogin = localStorage.getItem("login");
 } catch (err) {
     isStorageSupport = false;
 }
 
-link.addEventListener("click", function (evt) {
+headerLogin.addEventListener("click", function (evt) {
     evt.preventDefault();
-    popup.classList.add("modal-show-login");
+    loginPopup.classList.add("modal-show-login");
 
-    if (storage) {
-        login.value = storage;
+    if (storageLogin) {
+        login.value = storageLogin;
         password.focus();
     } else {
         login.focus();
     }
 });
 
-window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-        if (popup.classList.contains("modal-show-login")) {
-            evt.preventDefault();
-            popup.classList.remove("modal-show-login");
-            popup.classList.remove("modal-error");
-        }
-    }
-});
-
 form.addEventListener("submit", function (evt) {
     if (!login.value || !password.value) {
         evt.preventDefault();
-        popup.classList.add("modal-error");
-        console.log("Нужно ввести логин и пароль");
+        loginPopup.classList.add("modal-error");
     } else {
         if (isStorageSupport) {
             localStorage.setItem("login", login.value);
@@ -49,32 +50,18 @@ form.addEventListener("submit", function (evt) {
     }
 });
 
-var feedbackLink = document.querySelector(".feedback-form");
-
-var feedbackPopup = document.querySelector(".modal");
-var feedbackContainer = document.querySelector(".feedback");
-var feedbackClose = feedbackPopup.querySelector(".modal-close");
-
-var feedbackForm = feedbackPopup.querySelector("form");
-var submitButton = feedbackPopup.querySelector("button");
-var feedbackName = feedbackPopup.querySelector("[name=name]");
-var feedbackEmail = feedbackPopup.querySelector("[name=email]");
-var feedbackContents = feedbackPopup.querySelector("[name=contents]");
-
-var isStorageSupport = true;
-var storage = "";
-
-try {
-    storage = localStorage.getItem("feedbackEmail");
-} catch (err) {
-    isStorageSupport = false;
-}
-
-try {
-    storage = localStorage.getItem("feedbackName");
-} catch (err) {
-    isStorageSupport = false;
-}
+window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+        if (loginPopup.classList.contains("modal-show-login")) {
+            loginPopup.classList.remove("modal-show-login");
+            loginPopup.classList.remove("modal-error");
+        }
+        if (feedbackPopup.classList.contains("modal-show-feedback")) {
+            feedbackPopup.classList.remove("modal-show-feedback");
+            feedbackContainer.classList.remove("modal-error");
+        }
+    }
+});
 
 feedbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -91,18 +78,8 @@ feedbackClose.addEventListener("click", function (evt) {
     feedbackPopup.classList.remove("modal-show-feedback");
 });
 
-window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-        if (feedbackPopup.classList.contains("modal-show-feedback")) {
-            evt.preventDefault();
-            feedbackPopup.classList.remove("modal-show-feedback");
-            feedbackContainer.classList.remove("modal-error");
-        }
-    }
-});
-
 submitButton.addEventListener("click", function (evt) {
-    if (!feedbackName.value || !feedbackPassword.value || !feedbackContents.value) {
+    if (!feedbackName.value || !feedbackEmail.value || !feedbackContents.value) {
         evt.preventDefault();
         feedbackContainer.classList.add("modal-error");
         setTimeout(function () {
@@ -110,7 +87,8 @@ submitButton.addEventListener("click", function (evt) {
         }, 1000);
     } else {
         if (isStorageSupport) {
-            localStorage.setItem("feedbackName", name.value);
+            localStorage.setItem("feedbackName", feedbackName.value);
+            localStorage.setItem("feedbackEmail", feedbackEmail.value);
         }
     }
 });

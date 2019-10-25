@@ -24,7 +24,7 @@
             <nav class="site-nav">
               <ul class="main-page-nav">
                 <li class="main-nav-item">
-                  <a href="catalog.html">Каталог</a>
+                  <a href="catalog.html" class="top-level-link">Каталог</a>
                   <ul class="catalog catalog-dropdown">
                     <li class="dropdown-item"><a href="">Новинки</a></li>
                     <li class="dropdown-item"><a href="">Сливочное</a></li>
@@ -33,8 +33,12 @@
                     <li class="dropdown-item"><a href="">Мелорин</a></li>
                   </ul>
                 </li>
-                <li class="main-nav-item"><a href="">Доставка и оплата</a></li>
-                <li class="main-nav-item"><a href="">О Компании</a></li>
+                <li class="main-nav-item">
+                  <a href="" class="top-level-link">Доставка и оплата</a>
+                </li>
+                <li class="main-nav-item">
+                  <a href="" class="top-level-link">О Компании</a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -90,6 +94,26 @@
                           -0.04,11.96 6.00,11.96 6.00,11.96
                           6.00,11.96 6.00,14.88 6.00,14.88 Z" />
               </svg>Вход</a>
+              <div class="modal-login">
+                <h2 class="visually-hidden">Личный кабинет</h2>
+                <form>
+                  <p class="login-email">
+                    <label class="visually-hidden" for="user-login">Логин</label>
+                    <input id="user-login" type="text" name="login" placeholder="email@example.com">
+                  </p>
+                  <p class="login-password">
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input id="user-password" type="password" name="password" placeholder="••••••••">
+                  </p>
+                  <div class="login-bottom-wrapper">
+                    <p class="login-links">
+                      <a class="restore" href="">Забыли пароль?</a>
+                      <a class="new-member" href="">Новая регистрация</a>
+                    </p>
+                    <button type="submit">Войти</button>
+                  </div>
+                </form>
+              </div>
             <a class="header-cart" href="cart.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="0.233333in" height="0.222222in" viewBox="0 0 21 20">
                 <path class="cart-path" fill="none" stroke="black" stroke-width="0.1" d="M 15.98,16.00
@@ -118,26 +142,7 @@
                           6.92,13.00 17.37,13.00 17.37,13.00
                           17.37,13.00 18.55,4.03 18.55,4.03 Z" /></svg>
               Пусто</a>
-            <div class="modal-login">
-              <h2 class="visually-hidden">Личный кабинет</h2>
-              <form>
-                <p class="login-email">
-                  <label class="visually-hidden" for="user-login">Логин</label>
-                  <input id="user-login" type="text" name="login" placeholder="email@example.com">
-                </p>
-                <p class="login-password">
-                  <label class="visually-hidden" for="user-password">Пароль</label>
-                  <input id="user-password" type="password" name="password" placeholder="••••••••">
-                </p>
-                <div class="login-bottom-wrapper">
-                  <p class="login-links">
-                    <a class="restore" href="">Забыли пароль?</a>
-                    <a class="new-member" href="">Новая регистрация</a>
-                  </p>
-                  <button type="submit">Войти</button>
-                </div>
-              </form>
-            </div>
+            
           </div>
         </div>
         <ul class="open-hours">
