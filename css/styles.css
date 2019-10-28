@@ -200,10 +200,11 @@ header .schedule {
     font-weight: 800;
 }
 
-.btn {
-    display: inline-block;
+.slide-button {
     height: 40px;
+    display: inline-block;
     padding: 12px 41px;
+
     font-weight: 600;
     font-size: 31px;
     line-height: 33px;
@@ -212,20 +213,23 @@ header .schedule {
     vertical-align: top;
     text-decoration: none;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
     background: #f26843;
     background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
     border-radius: 50px;
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     border: none;
+
     cursor: pointer;
 }
 
-.btn:hover {
+.slide-button:hover,
+.slide-button:focus {
     background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
     box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.btn:active {
+.slide-button:active {
     background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
     box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -1398,22 +1402,25 @@ footer ul {
 
 ul.social {
     width: 185px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
     margin: 0;
     padding: 0;
 }
 
 ul.social img {
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, .2);
+    border: 3px solid rgba(255, 255, 255, 0.2);
     opacity: 0.8;
 }
-
-ul.social img:hover {
-    border: 3px solid rgba(255, 255, 255, .7);
+/* фокус не работает */
+ul.social img:hover,
+ul.social img:focus {
+    border: 3px solid rgba(255, 255, 255, 0.7);
     opacity: 1;
 }
 
@@ -1424,9 +1431,11 @@ ul.social img:active {
 ul.footer-nav {
     width: 300px;
     height: 50px;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    
     margin: 0;
     padding: 0;
 }
@@ -1440,7 +1449,8 @@ ul.footer-nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.footer-nav a:hover {
+.footer-nav a:hover,
+.footer-nav a:focus {
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
@@ -1483,7 +1493,8 @@ ul.footer-nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.made-in-logo a:hover {
+.made-in-logo a:hover,
+.made-in-logo a:focus {
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
@@ -1538,7 +1549,8 @@ ul.pagination {
     text-align: center;
 }
 
-.pagination ol li:hover {
+.pagination ol li:hover,
+.pagination ol li:focus {
     background: rgba(255, 255, 255, 0.2);
 }
 
