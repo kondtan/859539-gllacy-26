@@ -21,6 +21,44 @@ if (feedbackPopup) {
     var feedbackEmail = feedbackPopup.querySelector("[name=email]");
     var feedbackContents = feedbackPopup.querySelector("[name=contents]");
     var submitButton = feedbackPopup.querySelector("button");
+    
+    feedbackLink.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        if (document.querySelector("modal-show-feedback") == null) {
+            evt.stopPropagation();
+        }
+        feedbackPopup.classList.add("modal-show-feedback");
+        feedbackContainer.classList.add("animated-entrance");
+        setTimeout(function () {
+            feedbackContainer.classList.remove("animated-entrance");
+        }, 1000);
+    });
+
+    feedbackClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        feedbackContainer.classList.add("animated-exit");
+        feedbackPopup.classList.remove("modal-show-feedback");
+    });
+
+    submitButton.addEventListener("click", function (evt) {
+        if (!feedbackName.value || !feedbackEmail.value || !feedbackContents.value) {
+            evt.preventDefault();
+            feedbackContainer.classList.add("modal-error");
+            setTimeout(function () {
+                feedbackContainer.classList.remove("modal-error");
+            }, 1000);
+        } else {
+            if (isStorageSupport) {
+                localStorage.setItem("feedbackName", feedbackName.value);
+                localStorage.setItem("feedbackEmail", feedbackEmail.value);
+            }
+        }
+    });
+
+    feedbackContainer.addEventListener("click", function (evt) {
+        evt.stopPropagation();
+    });
+
 };
 
 try {
@@ -31,9 +69,11 @@ try {
 
 headerLogin.addEventListener("click", function (evt) {
     evt.preventDefault();
+    if (document.querySelector(".modal-show-login") == null) {
+        evt.stopPropagation();
+    }
     loginPopup.classList.add("modal-show-login");
-
-    if (storageLogin) {
+    if (isStorageSupport) {
         login.value = storageLogin;
         password.focus();
     } else {
@@ -65,40 +105,13 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
-feedbackLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    feedbackPopup.classList.add("modal-show-feedback");
-    feedbackContainer.classList.add("animated-entrance");
-    setTimeout(function () {
-        feedbackContainer.classList.remove("animated-entrance");
-    }, 1000);
-});
-
-feedbackClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    feedbackContainer.classList.add("animated-exit");
-    feedbackPopup.classList.remove("modal-show-feedback");
-});
-
-submitButton.addEventListener("click", function (evt) {
-    if (!feedbackName.value || !feedbackEmail.value || !feedbackContents.value) {
-        evt.preventDefault();
-        feedbackContainer.classList.add("modal-error");
-        setTimeout(function () {
-            feedbackContainer.classList.remove("modal-error");
-        }, 1000);
-    } else {
-        if (isStorageSupport) {
-            localStorage.setItem("feedbackName", feedbackName.value);
-            localStorage.setItem("feedbackEmail", feedbackEmail.value);
-        }
+window.addEventListener("click", function(evt) {
+    loginPopup.classList.remove("modal-show-login");
+    if (feedbackPopup) {
+        feedbackPopup.classList.remove("modal-show-feedback");
     }
 });
 
-feedbackPopup.addEventListener("click", function (evt) {
-    feedbackPopup.classList.remove("modal-show-feedback");
-});
-
-feedbackContainer.addEventListener("click", function (evt) {
+loginPopup.addEventListener("click", function(evt) {
     evt.stopPropagation();
-});
+})
