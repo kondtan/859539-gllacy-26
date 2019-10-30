@@ -1,3 +1,5 @@
+var mapExists = document.querySelector(".map")
+
 var dropdownWrapper = document.querySelector(".dropdown-wrapper")
 var catalogLink = dropdownWrapper.querySelector(".catalog-link");
 var dropdownPopup = dropdownWrapper.querySelector(".catalog-dropdown");
@@ -9,24 +11,37 @@ var searchPopup = searchWrapper.querySelector("form");
 var loginWrapper = document.querySelector(".login-wrapper");
 var headerLogin = document.querySelector(".header-login");
 
-var cartWrapper = document.querySelector(".cart-wrapper");
-var cartLink = cartWrapper.querySelector(".cart-active");
-var cartPopup = cartWrapper.querySelector(".cart");
+var loginPopup = document.querySelector(".modal-login");
+var form = loginPopup.querySelector("form");
+var login = loginPopup.querySelector("[name=login]");
+var password = loginPopup.querySelector("[name=password]");
+
 
 var feedbackLink = document.querySelector(".feedback-form");
+var activeCart = document.querySelector(".cart-active");
+var headerCart = document.querySelector(".header-cart");
 
 var isStorageSupport = true;
 var storageLogin = "";
 var storageEmail = "";
 var storageName = "";
 
-var loginPopup = document.querySelector(".modal-login");
-var form = loginPopup.querySelector("form");
-var login = loginPopup.querySelector("[name=login]");
-var password = loginPopup.querySelector("[name=password]");
+try {
+    storageLogin = localStorage.getItem("login");
+} catch (err) {
+    isStorageSupport = false;
+}
 
-var feedbackPopup = document.querySelector(".modal");
-if (feedbackPopup) {
+
+if (mapExists) {
+    mapExists.classList.remove("nojs");
+}
+
+
+//слушаем фидбэк
+if (feedbackLink) {
+    
+    var feedbackPopup = document.querySelector(".modal");
     var feedbackContainer = document.querySelector(".feedback");
     var feedbackClose = feedbackPopup.querySelector(".modal-close");
 
@@ -54,6 +69,11 @@ if (feedbackPopup) {
         feedbackPopup.classList.remove("modal-show-feedback");
     });
 
+    feedbackPopup.addEventListener("click", function (evt) {
+        feedbackContainer.classList.add("animated-exit");
+        feedbackPopup.classList.remove("modal-show-feedback");
+    });
+
     submitButton.addEventListener("click", function (evt) {
         if (!feedbackName.value || !feedbackEmail.value || !feedbackContents.value) {
             evt.preventDefault();
@@ -75,35 +95,54 @@ if (feedbackPopup) {
 
 };
 
-try {
-    storageLogin = localStorage.getItem("login");
-} catch (err) {
-    isStorageSupport = false;
+// слушаем корзину
+headerCart.addEventListener("click", function (evt) {
+    evt.preventDefault(); 
+});
+
+if (activeCart) {
+    var cartWrapper = document.querySelector(".cart-wrapper");
+    var cartPopup = cartWrapper.querySelector(".cart");
+    
+    cartWrapper.addEventListener("mouseenter", function(evt) {
+        cartPopup.classList.add("show-cart");
+    });
+    
+    cartWrapper.addEventListener("mouseleave", function(evt) {
+        cartPopup.classList.remove("show-cart");
+    });
 }
 
+
+
+
 //слушаем дропдаун меню
-catalogLink.addEventListener("mouseenter", function (evt) {
+dropdownWrapper.addEventListener("mouseenter", function (evt) {
     dropdownPopup.classList.add("show-dropdown");
 });
 
+dropdownWrapper.addEventListener("mouseleave", function(evt) {
+    dropdownPopup.classList.remove("show-dropdown");
+});
+
+
 // слушаем поиск
 headerSearch.addEventListener("mouseenter", function (evt) {
-    evt.preventDefault();
     searchPopup.classList.add("modal-show-search");
+});
+
+headerSearch.addEventListener("click", (evt) => {
+    evt.preventDefault();
 });
 
 searchWrapper.addEventListener("mouseleave", function (evt) {
     searchPopup.classList.remove("modal-show-search");
 });
 
-//слушаем ховер над логином
+//слушаем логин
 headerLogin.addEventListener("mouseenter", function (evt) {
-    evt.preventDefault();
-    if (document.querySelector(".modal-show-login") == null) {
-        evt.stopPropagation();
-    }
     loginPopup.classList.add("modal-show-login");
-    if (isStorageSupport) {
+    if (storageLogin) {
         login.value = storageLogin;
         password.focus();
     } else {
@@ -111,22 +150,9 @@ headerLogin.addEventListener("mouseenter", function (evt) {
     }
 });
 
-//слушаем корзину
-cartWrapper.addEventListener("mouseenter", function(evt) {
-    cartPopup.classList.add("show-cart");
-});
-
-dropdownWrapper.addEventListener("mouseleave", function(evt) {
-    dropdownPopup.classList.remove("show-dropdown");
-});
-
-loginWrapper.addEventListener("mouseleave", function(evt) {
-    loginPopup.classList.remove("modal-show-login");
-});
-
-cartWrapper.addEventListener("mouseleave", function(evt) {
-    cartPopup.classList.remove("show-cart");
-});
+headerLogin.addEventListener("click", function(evt) {
+    evt.preventDefault();
+})
 
 form.addEventListener("submit", function(evt) {
     if (!login.value || !password.value) {
@@ -142,27 +168,24 @@ form.addEventListener("submit", function(evt) {
     }
 });
 
+loginWrapper.addEventListener("mouseleave", function(evt) {
+    loginPopup.classList.remove("modal-show-login");
+});
+
+// cлушаем ESC
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
         if (loginPopup.classList.contains("modal-show-login")) {
             loginPopup.classList.remove("modal-show-login");
         }
-        if (feedbackPopup.classList.contains("modal-show-feedback")) {
-            feedbackPopup.classList.remove("modal-show-feedback");
-        }
         if (searchPopup.classList.contains("modal-show-search")) {
             searchPopup.classList.remove("modal-show-search");
         }
+        if (feedbackPopup && feedbackPopup.classList.contains("modal-show-feedback")) {
+            feedbackPopup.classList.remove("modal-show-feedback");
+        }
+        if (cartPopup && cartPopup.classList.contains("show-cart")) {
+            cartPopup.classList.remove("show-cart");
+        }
     }
 });
-
-window.addEventListener("click", function(evt) {
-    loginPopup.classList.remove("modal-show-login");
-    if (feedbackPopup) {
-        feedbackPopup.classList.remove("modal-show-feedback");
-    }
-});
-
-loginPopup.addEventListener("click", function(evt) {
-    evt.stopPropagation();
-})
