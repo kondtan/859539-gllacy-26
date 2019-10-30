@@ -1,4 +1,18 @@
+var dropdownWrapper = document.querySelector(".dropdown-wrapper")
+var catalogLink = dropdownWrapper.querySelector(".catalog-link");
+var dropdownPopup = dropdownWrapper.querySelector(".catalog-dropdown");
+
+var searchWrapper = document.querySelector(".search-wrapper");
+var headerSearch = searchWrapper.querySelector(".header-search");
+var searchPopup = searchWrapper.querySelector("form");
+
+var loginWrapper = document.querySelector(".login-wrapper");
 var headerLogin = document.querySelector(".header-login");
+
+var cartWrapper = document.querySelector(".cart-wrapper");
+var cartLink = cartWrapper.querySelector(".cart-active");
+var cartPopup = cartWrapper.querySelector(".cart");
+
 var feedbackLink = document.querySelector(".feedback-form");
 
 var isStorageSupport = true;
@@ -67,7 +81,23 @@ try {
     isStorageSupport = false;
 }
 
-headerLogin.addEventListener("click", function (evt) {
+//слушаем дропдаун меню
+catalogLink.addEventListener("mouseenter", function (evt) {
+    dropdownPopup.classList.add("show-dropdown");
+});
+
+// слушаем поиск
+headerSearch.addEventListener("mouseenter", function (evt) {
+    evt.preventDefault();
+    searchPopup.classList.add("modal-show-search");
+});
+
+searchWrapper.addEventListener("mouseleave", function (evt) {
+    searchPopup.classList.remove("modal-show-search");
+});
+
+//слушаем ховер над логином
+headerLogin.addEventListener("mouseenter", function (evt) {
     evt.preventDefault();
     if (document.querySelector(".modal-show-login") == null) {
         evt.stopPropagation();
@@ -81,10 +111,30 @@ headerLogin.addEventListener("click", function (evt) {
     }
 });
 
-form.addEventListener("submit", function (evt) {
+//слушаем корзину
+cartWrapper.addEventListener("mouseenter", function(evt) {
+    cartPopup.classList.add("show-cart");
+});
+
+dropdownWrapper.addEventListener("mouseleave", function(evt) {
+    dropdownPopup.classList.remove("show-dropdown");
+});
+
+loginWrapper.addEventListener("mouseleave", function(evt) {
+    loginPopup.classList.remove("modal-show-login");
+});
+
+cartWrapper.addEventListener("mouseleave", function(evt) {
+    cartPopup.classList.remove("show-cart");
+});
+
+form.addEventListener("submit", function(evt) {
     if (!login.value || !password.value) {
         evt.preventDefault();
         loginPopup.classList.add("modal-error");
+        setTimeout(function () {
+            loginPopup.classList.remove("modal-error");
+        }, 1000);
     } else {
         if (isStorageSupport) {
             localStorage.setItem("login", login.value);
@@ -96,11 +146,12 @@ window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
         if (loginPopup.classList.contains("modal-show-login")) {
             loginPopup.classList.remove("modal-show-login");
-            loginPopup.classList.remove("modal-error");
         }
         if (feedbackPopup.classList.contains("modal-show-feedback")) {
             feedbackPopup.classList.remove("modal-show-feedback");
-            feedbackContainer.classList.remove("modal-error");
+        }
+        if (searchPopup.classList.contains("modal-show-search")) {
+            searchPopup.classList.remove("modal-show-search");
         }
     }
 });

@@ -16,8 +16,16 @@
           </a>
           <nav class="site-nav">
             <ul class="main-page-nav">
-              <li class="main-nav-item">
-                <a href="" class="catalog-current top-level-link"><span>Каталог</span></a>
+              <li class="main-nav-item dropdown-wrapper">
+                <a href="" class="catalog-current top-level-link catalog-link"><span>Каталог</span></a>
+                <div class="gap-closer"></div>
+                <ul class="catalog catalog-dropdown">
+                  <li class="dropdown-item"><a href="">Новинки</a></li>
+                  <li class="dropdown-item"><a href="catalog.html">Сливочное</a></li>
+                  <li class="dropdown-item"><a href="">Щербеты</a></li>
+                  <li class="dropdown-item"><a href="">Фруктовый лед</a></li>
+                  <li class="dropdown-item"><a href="">Мелорин</a></li>
+                </ul>
               </li>
               <li class="main-nav-item">
                 <a href="" class="top-level-link">Доставка и оплата</a>
@@ -29,65 +37,78 @@
           </nav>
         </div>
         <div class="user-navigation">
-          <a class="header-search" href="search.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 17 17">
-            <path class="search-path" fill="white" stroke="white" stroke-width="0.6"
-           d="M 16.96,15.53
-              C 16.96,15.53 11.75,10.32 11.75,10.32
-                12.54,9.25 13.00,7.93 13.00,6.50
-                13.00,6.50 13.00,6.50 13.00,6.50
-                13.00,6.50 13.00,6.50 13.00,6.50
-                13.00,2.91 10.09,-0.00 6.50,0.00
-                2.91,0.00 0.00,2.91 0.00,6.50
-                0.00,10.09 2.91,13.00 6.50,13.00
-                6.50,13.00 6.50,13.00 6.50,13.00
-                7.94,13.00 9.27,12.53 10.34,11.74
-                10.34,11.74 15.54,16.94 15.54,16.94
-                15.54,16.94 16.96,15.53 16.96,15.53 Z
-              M 6.50,11.00
-              C 4.02,11.00 2.00,8.98 2.00,6.50
-                2.00,4.02 4.02,2.00 6.50,2.00
-                8.98,2.00 11.00,4.02 11.00,6.50
-                11.00,8.98 8.98,11.00 6.50,11.00 Z" />
-            </svg>
-            <span class="visually-hidden">Поиск</span>
-          </a>
+          <div class="search-wrapper">
+            <a class="header-search" href="search.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 17 17">
+              <path class="search-path" fill="white" stroke="white" stroke-width="0.6"
+            d="M 16.96,15.53
+                C 16.96,15.53 11.75,10.32 11.75,10.32
+                  12.54,9.25 13.00,7.93 13.00,6.50
+                  13.00,6.50 13.00,6.50 13.00,6.50
+                  13.00,6.50 13.00,6.50 13.00,6.50
+                  13.00,2.91 10.09,-0.00 6.50,0.00
+                  2.91,0.00 0.00,2.91 0.00,6.50
+                  0.00,10.09 2.91,13.00 6.50,13.00
+                  6.50,13.00 6.50,13.00 6.50,13.00
+                  7.94,13.00 9.27,12.53 10.34,11.74
+                  10.34,11.74 15.54,16.94 15.54,16.94
+                  15.54,16.94 16.96,15.53 16.96,15.53 Z
+                M 6.50,11.00
+                C 4.02,11.00 2.00,8.98 2.00,6.50
+                  2.00,4.02 4.02,2.00 6.50,2.00
+                  8.98,2.00 11.00,4.02 11.00,6.50
+                  11.00,8.98 8.98,11.00 6.50,11.00 Z" />
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+            </a>
+            <div class="gap-closer"></div>
 
-          <a class="header-login" href="login.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="0.233333in" height="0.211111in" viewBox="0 0 21 19">
-              <path class="login-path"
-                 fill="none" stroke="black" stroke-width="0.2"
-                 d="M 18.00,0.00
-                    C 18.00,0.00 5.00,0.00 5.00,0.00
-                      3.90,0.00 3.00,0.90 3.00,2.00
-                      3.00,2.00 3.00,4.00 3.00,4.00
-                      3.00,4.00 5.00,4.00 5.00,4.00
-                      5.00,4.00 5.00,2.00 5.00,2.00
-                      5.00,2.00 18.00,2.00 18.00,2.00
-                      18.00,2.00 18.00,17.00 18.00,17.00
-                      18.00,17.00 5.00,17.00 5.00,17.00
-                      5.00,17.00 5.00,15.00 5.00,15.00
-                      5.00,15.00 3.00,15.00 3.00,15.00
-                      3.00,15.00 3.00,17.00 3.00,17.00
-                      3.00,19.00 5.00,19.00 5.00,19.00
-                      5.00,19.00 18.00,19.00 18.00,19.00
-                      19.10,19.00 20.00,18.10 20.00,17.00
-                      20.00,17.00 20.00,2.00 20.00,2.00
-                      20.00,0.90 19.10,0.00 18.00,0.00 Z
-                    M 6.00,14.88
-                    C 6.00,14.88 12.92,9.50 12.92,9.50
-                      12.92,9.50 6.00,4.12 6.00,4.12
-                      6.00,4.12 6.00,7.04 6.00,7.04
-                      6.00,7.04 -0.04,7.04 -0.04,7.04
-                      -0.04,7.04 -0.04,11.96 -0.04,11.96
-                      -0.04,11.96 6.00,11.96 6.00,11.96
-                      6.00,11.96 6.00,14.88 6.00,14.88 Z" />
-            </svg>
-            Вход
-          </a>
+            <form action="/search" method="POST" class="search">
+              <p>
+                <label class="visually-hidden" for="search">Поиск</label>
+                <input id="search" type="text" placeholder="Крем-брюле">
+              </p>
+              <button class="visually-hidden" type="submit" value="Поиск">Поиск</button>
+            </form>
+          </div>
+
+          <div class="login-wrapper">
+            <a class="header-login" href="login.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="0.233333in" height="0.211111in" viewBox="0 0 21 19">
+                <path class="login-path"
+                  fill="none" stroke="black" stroke-width="0.2"
+                  d="M 18.00,0.00
+                      C 18.00,0.00 5.00,0.00 5.00,0.00
+                        3.90,0.00 3.00,0.90 3.00,2.00
+                        3.00,2.00 3.00,4.00 3.00,4.00
+                        3.00,4.00 5.00,4.00 5.00,4.00
+                        5.00,4.00 5.00,2.00 5.00,2.00
+                        5.00,2.00 18.00,2.00 18.00,2.00
+                        18.00,2.00 18.00,17.00 18.00,17.00
+                        18.00,17.00 5.00,17.00 5.00,17.00
+                        5.00,17.00 5.00,15.00 5.00,15.00
+                        5.00,15.00 3.00,15.00 3.00,15.00
+                        3.00,15.00 3.00,17.00 3.00,17.00
+                        3.00,19.00 5.00,19.00 5.00,19.00
+                        5.00,19.00 18.00,19.00 18.00,19.00
+                        19.10,19.00 20.00,18.10 20.00,17.00
+                        20.00,17.00 20.00,2.00 20.00,2.00
+                        20.00,0.90 19.10,0.00 18.00,0.00 Z
+                      M 6.00,14.88
+                      C 6.00,14.88 12.92,9.50 12.92,9.50
+                        12.92,9.50 6.00,4.12 6.00,4.12
+                        6.00,4.12 6.00,7.04 6.00,7.04
+                        6.00,7.04 -0.04,7.04 -0.04,7.04
+                        -0.04,7.04 -0.04,11.96 -0.04,11.96
+                        -0.04,11.96 6.00,11.96 6.00,11.96
+                        6.00,11.96 6.00,14.88 6.00,14.88 Z" />
+              </svg>
+              Вход
+            </a>
+            <div class="gap-closer"></div>
             <div class="modal-login">
               <h2 class="visually-hidden">Личный кабинет</h2>
-              <form>
+              <form action="/login" method="POST">
                 <p class="login-email">
                   <label class="visually-hidden" for="user-login">Логин</label>
                   <input id="user-login" type="text" name="login" placeholder="email@example.com">
@@ -105,7 +126,33 @@
                 </div>
               </form>
             </div>
-        <a class="header-cart cart-active" href="cart.html">2 товара</a>
+          </div>
+          <div class="cart-wrapper">
+            <a class="header-cart cart-active" href="cart.html">2 товара</a>
+            <div class="gap-closer"></div>
+            <section class="cart">
+                <table class="cart-items">
+                  <tr>
+                    <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
+                    <td class="cart-item-preview"><img src="img/cart-item1.jpg" alt="Пломбир с апельсиновым джемом"></td>
+                    <td class="cart-item-name">Пломбир с апельсиновым джемом</td>
+                    <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">200 руб.</span></td>
+                    <td class="cart-item-total">300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
+                    <td class="cart-item-preview"><img src="img/cart-item2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                    <td class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">300 руб.</span></td>
+                    <td class="cart-item-total">450 руб.</td>
+                  </tr>
+                </table>
+                <div class="total-submission">
+                  <p class="cart-total">Итого: 750 руб.</p>
+                  <button class="place-order" type="submit">Оформить заказ</button>
+                </div>
+            </section>
+          </div>
         </div>
       </div>
       <ul class="open-hours">
@@ -120,112 +167,112 @@
     </header>
     <main class="catalog-main">
       <h1 class="catalog-title">Сливочное мороженое</h1>
-      <div class="item-filter">
+      <form action="/catalog-filter" method="POST" class="item-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <fieldset class="popularity">
-          <legend>Сортировка:</legend>
-          <div class="filter-select-wrapper">
-            <select name="theme" class="filter-select">
-              <option value="filter-popular">по популярности</option>
-              <option value="filter-price-higher">по возрастанию цены</option>
-              <option value="filter-price-lower">по убыванию цены</option>
-            </select>
-            <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg" width="0.122222in" height="0.111111in" viewBox="0 0 11 10">
-              <path fill="none" stroke="black" stroke-width="1"
-                d="M 5.50,10.00
-                  C 5.50,10.00 0.00,0.00 0.00,0.00
-                0.00,0.00 11.00,0.00 11.00,0.00" />
-            </svg>
-          </div>
-        </fieldset>
-        <fieldset class="price">
-          <legend>Цена: 100 руб. – 500 руб.</legend>
-          <div class="range-filter">
-            <div class="range-controls">
-              <div class="scale">
-                <div class="bar"></div>
-              </div>
-              <div class="toggle toggle-min"></div>
-              <div class="toggle toggle-max"></div>
+          <fieldset class="popularity">
+            <legend>Сортировка:</legend>
+            <div class="filter-select-wrapper">
+              <select name="theme" class="filter-select">
+                <option value="filter-popular">по популярности</option>
+                <option value="filter-price-higher">по возрастанию цены</option>
+                <option value="filter-price-lower">по убыванию цены</option>
+              </select>
+              <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg" width="0.122222in" height="0.111111in" viewBox="0 0 11 10">
+                <path fill="none" stroke="black" stroke-width="1"
+                  d="M 5.50,10.00
+                    C 5.50,10.00 0.00,0.00 0.00,0.00
+                  0.00,0.00 11.00,0.00 11.00,0.00" />
+              </svg>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="fat" tabindex="0">
-          <legend>Жирность:</legend>
-          <ul>
-            <li class="filter-option">
-              <label class="radio">
-                <input class="filter-input filter-input-radio" type="radio" name="product-group" value="zero-percent" disabled checked>
-                <span class="radio-button"></span>
-                <span class="fat-value">0%</span>
-              </label>               
-            </li>
-            <li class="filter-option">
-              <label>
-                <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-ten-percent">
-                <span class="radio-button"></span>
-                <span class="fat-value">до 10%</span> 
-              </label>
-            </li>
-            <li class="filter-option">
-              <label>
-                <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-30-percent">
-                <span class="radio-button"></span>
-                <span class="fat-value">до 30%</span> 
-              </label>
-            </li>
-            <li class="filter-option">
-              <label>
-                <input class="filter-input filter-input-radio" type="radio" name="product-group" value="above-30-percent">
-                <span class="radio-button"></span>
-                <span class="fat-value">выше 30%</span>
-              </label> 
-            </li>
-          </ul>
-        </fieldset>
-        
-        <fieldset class="filling">
-          <legend>Наполнители:</legend>
-          <ul class="filling-checkbox">
-            <li>
-              <label class="check">
-                <input class="check-input" name="chocolate-filling" type="checkbox" checked>
+          </fieldset>
+          <fieldset class="price">
+            <legend>Цена: 100 руб. – 500 руб.</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="fat">
+            <legend>Жирность:</legend>
+            <ul>
+              <li class="filter-option">
+                <label class="radio">
+                  <input class="filter-input filter-input-radio" type="radio" name="product-group" value="zero-percent" disabled>
+                  <span class="radio-button"></span>
+                  <span class="fat-value">0%</span>
+                </label>               
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-ten-percent" checked>
+                  <span class="radio-button"></span>
+                  <span class="fat-value">до 10%</span> 
+                </label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-30-percent">
+                  <span class="radio-button"></span>
+                  <span class="fat-value">до 30%</span> 
+                </label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-input filter-input-radio" type="radio" name="product-group" value="above-30-percent">
+                  <span class="radio-button"></span>
+                  <span class="fat-value">выше 30%</span>
+                </label> 
+              </li>
+            </ul>
+          </fieldset>
+          
+          <fieldset class="filling">
+            <legend>Наполнители:</legend>
+            <ul class="filling-checkbox">
+              <li>
+                <label class="check">
+                  <input class="check-input" name="chocolate-filling" type="checkbox" checked>
+                  <span class="check-box"></span>
+                  <span class="filling-value">шоколадные</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="check-input" name="sprinkles-filling" type="checkbox" checked disabled>
+                  <span class="check-box"></span>
+                  <span class="filling-value">сахарные присыпки</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                <input class="check-input" name="fruit-filling" type="checkbox" disabled>
                 <span class="check-box"></span>
-                <span class="filling-value">шоколадные</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input class="check-input" name="sprinkles-filling" type="checkbox" checked disabled>
+                <span class="filling-value">фрукты</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                <input class="check-input" name="syrup-filling" type="checkbox">
                 <span class="check-box"></span>
-                <span class="filling-value">сахарные присыпки</span>
-              </label>
-            </li>
-            <li>
-              <label>
-              <input class="check-input" name="fruit-filling" type="checkbox" disabled>
-              <span class="check-box"></span>
-              <span class="filling-value">фрукты</span>
-              </label>
-            </li>
-            <li>
-              <label>
-              <input class="check-input" name="syrup-filling" type="checkbox">
-              <span class="check-box"></span>
-              <span class="filling-value">сиропы</span>
-              </label>
-            </li>
-            <li>
-              <label>
-              <input class="check-input" name="jam-filling" type="checkbox">
-              <span class="check-box"></span>
-              <span class="filling-value">джемы</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button type="submit">Применить</button>
-      </div>
+                <span class="filling-value">сиропы</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                <input class="check-input" name="jam-filling" type="checkbox">
+                <span class="check-box"></span>
+                <span class="filling-value">джемы</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Применить</button>
+      </form>
 
       <h2 class="visually-hidden">Список видов сливочного мороженого</h2>
       <ul class="catalog-list">
@@ -511,36 +558,13 @@
           <li><a href="">Экологические стандарты</a></li>
         </ul>
         <div class="made-in-logo">
-          <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
-          <div class="made-in">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019</div>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
+          </a>
+          <div class="made-in">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-link">HTML Academy</a> ©2019</div>
         </div>
       </div>
     </footer>
-  
-  <section class="cart">
-  <div class="cart-wrapper">
-    <table class="cart-items">
-      <tr>
-        <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
-        <td class="cart-item-preview"><img src="img/cart-item1.jpg" alt="Пломбир с апельсиновым джемом"></td>
-        <td class="cart-item-name">Пломбир с апельсиновым джемом</td>
-        <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">200 руб.</span></td>
-        <td class="cart-item-total">300 руб.</td>
-      </tr>
-      <tr>
-        <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
-        <td class="cart-item-preview"><img src="img/cart-item2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-        <td class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
-        <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">300 руб.</span></td>
-        <td class="cart-item-total">450 руб.</td>
-      </tr>
-    </table>
-    <div class="total-submission">
-      <p class="cart-total">Итого: 750 руб.</p>
-      <button class="place-order" type="submit">Оформить заказ</button>
-    </div>
-  </div>
-  </section>
   <script src="js/script.js"></script>
   </body>
 </html>

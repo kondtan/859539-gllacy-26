@@ -23,11 +23,12 @@
             </a>
             <nav class="site-nav">
               <ul class="main-page-nav">
-                <li class="main-nav-item">
-                  <a href="catalog.html" class="top-level-link">Каталог</a>
+                <li class="main-nav-item dropdown-wrapper">
+                  <a href="" class="top-level-link catalog-link">Каталог</a>
+                  <div class="gap-closer"></div>
                   <ul class="catalog catalog-dropdown">
                     <li class="dropdown-item"><a href="">Новинки</a></li>
-                    <li class="dropdown-item"><a href="">Сливочное</a></li>
+                    <li class="dropdown-item"><a href="catalog.html">Сливочное</a></li>
                     <li class="dropdown-item"><a href="">Щербеты</a></li>
                     <li class="dropdown-item"><a href="">Фруктовый лед</a></li>
                     <li class="dropdown-item"><a href="">Мелорин</a></li>
@@ -43,78 +44,94 @@
             </nav>
           </div>
           <div class="user-navigation">
-            <a class="header-search" href="search.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 17 17">
-                <path class="search-path" fill="white" stroke="white" stroke-width="0.6" d="M 16.96,15.53
-                      C 16.96,15.53 11.75,10.32 11.75,10.32
-                        12.54,9.25 13.00,7.93 13.00,6.50
-                        13.00,6.50 13.00,6.50 13.00,6.50
-                        13.00,6.50 13.00,6.50 13.00,6.50
-                        13.00,2.91 10.09,-0.00 6.50,0.00
-                        2.91,0.00 0.00,2.91 0.00,6.50
-                        0.00,10.09 2.91,13.00 6.50,13.00
-                        6.50,13.00 6.50,13.00 6.50,13.00
-                        7.94,13.00 9.27,12.53 10.34,11.74
-                        10.34,11.74 15.54,16.94 15.54,16.94
-                        15.54,16.94 16.96,15.53 16.96,15.53 Z
-                      M 6.50,11.00
-                      C 4.02,11.00 2.00,8.98 2.00,6.50
-                        2.00,4.02 4.02,2.00 6.50,2.00
-                        8.98,2.00 11.00,4.02 11.00,6.50
-                        11.00,8.98 8.98,11.00 6.50,11.00 Z" />
-              </svg>
-              <span class="visually-hidden">Поиск</span>
-            </a>
-            <a class="header-login" href="login.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="0.233333in" height="0.211111in" viewBox="0 0 21 19">
-                <path class="login-path" fill="none" stroke="black" stroke-width="0.2" d="M 18.00,0.00
-                        C 18.00,0.00 5.00,0.00 5.00,0.00
-                          3.90,0.00 3.00,0.90 3.00,2.00
-                          3.00,2.00 3.00,4.00 3.00,4.00
-                          3.00,4.00 5.00,4.00 5.00,4.00
-                          5.00,4.00 5.00,2.00 5.00,2.00
-                          5.00,2.00 18.00,2.00 18.00,2.00
-                          18.00,2.00 18.00,17.00 18.00,17.00
-                          18.00,17.00 5.00,17.00 5.00,17.00
-                          5.00,17.00 5.00,15.00 5.00,15.00
-                          5.00,15.00 3.00,15.00 3.00,15.00
-                          3.00,15.00 3.00,17.00 3.00,17.00
-                          3.00,19.00 5.00,19.00 5.00,19.00
-                          5.00,19.00 18.00,19.00 18.00,19.00
-                          19.10,19.00 20.00,18.10 20.00,17.00
-                          20.00,17.00 20.00,2.00 20.00,2.00
-                          20.00,0.90 19.10,0.00 18.00,0.00 Z
-                        M 6.00,14.88
-                        C 6.00,14.88 12.92,9.50 12.92,9.50
-                          12.92,9.50 6.00,4.12 6.00,4.12
-                          6.00,4.12 6.00,7.04 6.00,7.04
-                          6.00,7.04 -0.04,7.04 -0.04,7.04
-                          -0.04,7.04 -0.04,11.96 -0.04,11.96
-                          -0.04,11.96 6.00,11.96 6.00,11.96
-                          6.00,11.96 6.00,14.88 6.00,14.88 Z" />
-              </svg>
-              Вход
-            </a>
-            <div class="modal-login">
-              <h2 class="visually-hidden">Личный кабинет</h2>
-              <form>
-                  <p class="login-email">
-                    <label class="visually-hidden" for="user-login">Логин</label>
-                    <input id="user-login" type="text" name="login" placeholder="email@example.com">
-                  </p>
-                  <p class="login-password">
-                    <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input id="user-password" type="password" name="password" placeholder="••••••••">
-                  </p>
-                  <div class="login-bottom-wrapper">
-                    <p class="login-links">
-                      <a class="restore" href="">Забыли пароль?</a>
-                      <a class="new-member" href="">Новая регистрация</a>
-                    </p>
-                    <button type="submit">Войти</button>
-                  </div>
+            <div class="search-wrapper">
+              <a class="header-search" href="search.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 17 17">
+                  <path class="search-path" fill="white" stroke="white" stroke-width="0.6" d="M 16.96,15.53
+                        C 16.96,15.53 11.75,10.32 11.75,10.32
+                          12.54,9.25 13.00,7.93 13.00,6.50
+                          13.00,6.50 13.00,6.50 13.00,6.50
+                          13.00,6.50 13.00,6.50 13.00,6.50
+                          13.00,2.91 10.09,-0.00 6.50,0.00
+                          2.91,0.00 0.00,2.91 0.00,6.50
+                          0.00,10.09 2.91,13.00 6.50,13.00
+                          6.50,13.00 6.50,13.00 6.50,13.00
+                          7.94,13.00 9.27,12.53 10.34,11.74
+                          10.34,11.74 15.54,16.94 15.54,16.94
+                          15.54,16.94 16.96,15.53 16.96,15.53 Z
+                        M 6.50,11.00
+                        C 4.02,11.00 2.00,8.98 2.00,6.50
+                          2.00,4.02 4.02,2.00 6.50,2.00
+                          8.98,2.00 11.00,4.02 11.00,6.50
+                          11.00,8.98 8.98,11.00 6.50,11.00 Z" />
+                </svg>
+                <span class="visually-hidden">Поиск</span>
+              </a>
+              <div class="gap-closer"></div>
+
+              <form action="/search" method="POST" class="search">
+                <p>
+                  <label class="visually-hidden" for="search">Поиск</label>
+                  <input id="search" type="text" placeholder="Крем-брюле">
+                </p>
+                <button class="visually-hidden" type="submit" value="Поиск">Поиск</button>
               </form>
             </div>
+            
+            <div class="login-wrapper">
+              <a class="header-login" href="login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="0.233333in" height="0.211111in" viewBox="0 0 21 19">
+                  <path class="login-path" fill="none" stroke="black" stroke-width="0.2" d="M 18.00,0.00
+                          C 18.00,0.00 5.00,0.00 5.00,0.00
+                            3.90,0.00 3.00,0.90 3.00,2.00
+                            3.00,2.00 3.00,4.00 3.00,4.00
+                            3.00,4.00 5.00,4.00 5.00,4.00
+                            5.00,4.00 5.00,2.00 5.00,2.00
+                            5.00,2.00 18.00,2.00 18.00,2.00
+                            18.00,2.00 18.00,17.00 18.00,17.00
+                            18.00,17.00 5.00,17.00 5.00,17.00
+                            5.00,17.00 5.00,15.00 5.00,15.00
+                            5.00,15.00 3.00,15.00 3.00,15.00
+                            3.00,15.00 3.00,17.00 3.00,17.00
+                            3.00,19.00 5.00,19.00 5.00,19.00
+                            5.00,19.00 18.00,19.00 18.00,19.00
+                            19.10,19.00 20.00,18.10 20.00,17.00
+                            20.00,17.00 20.00,2.00 20.00,2.00
+                            20.00,0.90 19.10,0.00 18.00,0.00 Z
+                          M 6.00,14.88
+                          C 6.00,14.88 12.92,9.50 12.92,9.50
+                            12.92,9.50 6.00,4.12 6.00,4.12
+                            6.00,4.12 6.00,7.04 6.00,7.04
+                            6.00,7.04 -0.04,7.04 -0.04,7.04
+                            -0.04,7.04 -0.04,11.96 -0.04,11.96
+                            -0.04,11.96 6.00,11.96 6.00,11.96
+                            6.00,11.96 6.00,14.88 6.00,14.88 Z" />
+                </svg>
+                Вход
+              </a>
+              <div class="gap-closer"></div>
+              <div class="modal-login">
+                <h2 class="visually-hidden">Личный кабинет</h2>
+                <form action="/login" method="POST">
+                    <p class="login-email">
+                      <label class="visually-hidden" for="user-login">Логин</label>
+                      <input id="user-login" type="text" name="login" placeholder="email@example.com">
+                    </p>
+                    <p class="login-password">
+                      <label class="visually-hidden" for="user-password">Пароль</label>
+                      <input id="user-password" type="password" name="password" placeholder="••••••••">
+                    </p>
+                    <div class="login-bottom-wrapper">
+                      <p class="login-links">
+                        <a class="restore" href="">Забыли пароль?</a>
+                        <a class="new-member" href="">Новая регистрация</a>
+                      </p>
+                      <button type="submit">Войти</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+
             <a class="header-cart" href="cart.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="0.233333in" height="0.222222in" viewBox="0 0 21 20">
                 <path class="cart-path" fill="none" stroke="black" stroke-width="0.1" d="M 15.98,16.00
@@ -328,7 +345,7 @@
                 Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас
                 происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
               </p>
-              <form>
+              <form action="/subscribe" method="POST">
                 <p>
                   <label class="visually-hidden" for="newsletter">Введите email, чтобы подписаться на рассылку</label>
                   <input id="newsletter" type="email" name="email" placeholder="email@example.com">
@@ -389,15 +406,17 @@
             <li><a href="">Экологические стандарты</a></li>
           </ul>
           <div class="made-in-logo">
-            <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
-            <div class="made-in">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> ©2019</div>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
+            </a>
+            <div class="made-in">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-link">HTML Academy</a> ©2019</div>
           </div>
         </div>
       </footer>
       <div class="modal transparent-background">
         <div class="feedback">
           <p class="feedback-text">Мы обязательно вам ответим!</p>
-          <form class="feedback-form">
+          <form action="/feedback" method="POST" class="feedback-form">
             <p class="feedback-name">
               <label class="visually-hidden" for="submission-username">Введите имя и фамилию</label>
               <input id="submission-username" type="text" name="name" placeholder="Имя Фамилия">
@@ -420,13 +439,6 @@
               class="visually-hidden">Закрыть</span></button>
         </div>
       </div>
-      <form class="search">
-        <p>
-          <label class="visually-hidden" for="search">Поиск</label>
-          <input id="search" type="text" placeholder="Крем-брюле">
-        </p>
-        <button class="visually-hidden" type="submit" value="Поиск">Поиск</button>
-      </form>
     </div>
   </div>
   <script src="js/script.js"></script>
