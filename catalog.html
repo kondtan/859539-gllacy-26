@@ -18,10 +18,9 @@
             <ul class="main-page-nav catalog-nav">
               <li class="main-nav-item dropdown-wrapper">
                 <a href="" class="catalog-current top-level-link catalog-link"><span>Каталог</span></a>
-                <div class="gap-closer"></div>
                 <ul class="catalog catalog-dropdown">
                   <li class="dropdown-item"><a href="">Новинки</a></li>
-                  <li class="dropdown-item"><a href="catalog.html">Сливочное</a></li>
+                  <li class="dropdown-item current-section"><a href="catalog.html">Сливочное</a></li>
                   <li class="dropdown-item"><a href="">Щербеты</a></li>
                   <li class="dropdown-item"><a href="">Фруктовый лед</a></li>
                   <li class="dropdown-item"><a href="">Мелорин</a></li>
@@ -61,13 +60,12 @@
               </svg>
               <span class="visually-hidden">Поиск</span>
             </a>
-            <div class="gap-closer"></div>
 
-            <form action="/search" method="POST" class="search">
-              <p>
+            <form action="https://echo.htmlacademy.ru/" method="POST" class="search">
+              <fieldset>
                 <label class="visually-hidden" for="search">Поиск</label>
                 <input id="search" type="text" placeholder="Крем-брюле">
-              </p>
+              </fieldset>
               <button class="visually-hidden" type="submit" value="Поиск">Поиск</button>
             </form>
           </div>
@@ -105,10 +103,9 @@
               </svg>
               Вход
             </a>
-            <div class="gap-closer"></div>
             <div class="modal-login">
               <h2 class="visually-hidden">Личный кабинет</h2>
-              <form action="/login" method="POST">
+              <form action="https://echo.htmlacademy.ru/" method="POST">
                 <p class="login-email">
                   <label class="visually-hidden" for="user-login">Логин</label>
                   <input id="user-login" type="text" name="login" placeholder="email@example.com">
@@ -129,19 +126,18 @@
           </div>
           <div class="cart-wrapper">
             <a class="header-cart cart-active" href="cart.html">2 товара</a>
-            <div class="gap-closer"></div>
             <section class="cart">
                 <table class="cart-items">
                   <tr>
                     <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
-                    <td class="cart-item-preview"><img src="img/cart-item1.jpg" alt="Пломбир с апельсиновым джемом"></td>
+                    <td class="cart-item-preview"><img src="img/cart-item1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
                     <td class="cart-item-name">Пломбир с апельсиновым джемом</td>
                     <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">200 руб.</span></td>
                     <td class="cart-item-total">300 руб.</td>
                   </tr>
                   <tr>
                     <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
-                    <td class="cart-item-preview"><img src="img/cart-item2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                    <td class="cart-item-preview"><img src="img/cart-item2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
                     <td class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
                     <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">300 руб.</span></td>
                     <td class="cart-item-total">450 руб.</td>
@@ -155,10 +151,10 @@
           </div>
         </div>
       </div>
-      <ul class="open-hours">
-        <li class="schedule">С 10 до 20, ежедневно</li>
-        <li class="phone-number"><a href="tel:88124502525">8 812 450-25-25</a></li>
-      </ul>
+      <div class="open-hours">
+        <div class="schedule">С 10 до 20, ежедневно</div>
+        <div class="phone-number"><a href="tel:88124502525">8 812 450-25-25</a></div>
+      </div>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная&nbsp; &#187; &nbsp;</a></li>
         <li><a href="catalog.html">Каталог&nbsp; &#187; &nbsp;</a></li>
@@ -167,7 +163,7 @@
     </header>
     <main class="catalog-main">
       <h1 class="catalog-title">Сливочное мороженое</h1>
-      <form action="/catalog-filter" method="POST" class="item-filter">
+      <form action="https://echo.htmlacademy.ru/" method="POST" class="item-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
           <fieldset class="popularity">
             <legend>Сортировка:</legend>
@@ -202,7 +198,7 @@
             <ul>
               <li class="filter-option">
                 <label class="radio">
-                  <input class="filter-input filter-input-radio" type="radio" name="product-group" value="zero-percent" disabled>
+                  <input class="filter-input filter-input-radio" type="radio" name="product-group" value="zero-percent">
                   <span class="radio-button"></span>
                   <span class="fat-value">0%</span>
                 </label>               
@@ -243,14 +239,14 @@
               </li>
               <li>
                 <label>
-                  <input class="check-input" name="sprinkles-filling" type="checkbox" checked disabled>
+                  <input class="check-input" name="sprinkles-filling" type="checkbox" checked>
                   <span class="check-box"></span>
                   <span class="filling-value">сахарные присыпки</span>
                 </label>
               </li>
               <li>
                 <label>
-                <input class="check-input" name="fruit-filling" type="checkbox" disabled>
+                <input class="check-input" name="fruit-filling" type="checkbox">
                 <span class="check-box"></span>
                 <span class="filling-value">фрукты</span>
                 </label>
@@ -545,18 +541,40 @@
     </main>
     <footer>
       <div class="footer-wrapper footer-catalog">
-        <ul class="social">
-          <li><a href=""><img class="twitter-link" src="img/svg/twitter.svg" alt="twitter"><span class="visually-hidden">Twitter</span></a></li>
-          <li><a href=""><img class="instagram-link" src="img/svg/instagram.svg" alt="instagram"><span class="visually-hidden">Instagram</span></a></li>
-          <li><a href=""><img class="facebook-link" src="img/svg/fb.svg" alt="facebook"><span class="visually-hidden">Facebook</span></a></li>
-          <li><a href=""><img class="vkontakte-link" src="img/svg/vk.svg" alt="vkontakte"><span class="visually-hidden">Vkontakte</span></a></li>
-        </ul>
-        <ul class="footer-nav">
-          <li><a href="">Для поставщиков</a></li>
-          <li><a href="">О производстве</a></li>
-          <li><a href="">Наши документы</a></li>
-          <li><a href="">Экологические стандарты</a></li>
-        </ul>
+        <div class="footer-links">
+          <ul class="social">
+            <li>
+              <a href="https://twitter.com/htmlacademy_ru">
+                <img class="twitter-link" src="img/svg/twitter.svg" width="32" height="32" alt="twitter">
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/htmlacademy/">
+                <img class="instagram-link" src="img/svg/instagram.svg" width="32" height="32" alt="instagram">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/htmlacademy">
+                <img class="facebook-link" src="img/svg/fb.svg" width="32" height="32" alt="facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://vk.com/htmlacademy">
+                <img class="vkontakte-link" src="img/svg/vk.svg" width="32" height="32" alt="vkontakte">
+                <span class="visually-hidden">Vkontakte</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="footer-nav">
+            <li><a href="">Для поставщиков</a></li>
+            <li><a href="">О производстве</a></li>
+            <li><a href="">Наши документы</a></li>
+            <li><a href="">Экологические стандарты</a></li>
+          </ul>
+        </div>
         <div class="made-in-logo">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">

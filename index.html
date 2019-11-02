@@ -10,22 +10,21 @@
 </head>
 
 <body>
-  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
   <div class="site-wrapper">
     <div class="site-container">
       <header class="index-header">
         <div class="main-navigation">
           <div class="site-navigation">
             <a>
-              <img src="img/gllacy-logo.png" alt="Логотип GllacyShop">
+              <img src="img/gllacy-logo.png" width="154" height="64" alt="Логотип GllacyShop">
             </a>
             <nav class="site-nav">
               <ul class="main-page-nav home-page-nav">
                 <li class="main-nav-item dropdown-wrapper">
                   <a href="" class="top-level-link catalog-link">Каталог</a>
-                  <div class="gap-closer"></div>
                   <ul class="catalog catalog-dropdown">
                     <li class="dropdown-item"><a href="">Новинки</a></li>
                     <li class="dropdown-item"><a href="catalog.html">Сливочное</a></li>
@@ -67,13 +66,12 @@
                 </svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
-              <div class="gap-closer"></div>
 
-              <form action="/search" method="POST" class="search">
-                <p>
+              <form action="https://echo.htmlacademy.ru/" method="POST" class="search">
+                <fieldset>
                   <label class="visually-hidden" for="search">Поиск</label>
                   <input id="search" type="text" placeholder="Крем-брюле">
-                </p>
+                </fieldset>
                 <button class="visually-hidden" type="submit" value="Поиск">Поиск</button>
               </form>
             </div>
@@ -109,10 +107,9 @@
                 </svg>
                 Вход
               </a>
-              <div class="gap-closer"></div>
               <div class="modal-login">
                 <h2 class="visually-hidden">Личный кабинет</h2>
-                <form action="/login" method="POST">
+                <form action="https://echo.htmlacademy.ru/" method="POST">
                     <p class="login-email">
                       <label class="visually-hidden" for="user-login">Логин</label>
                       <input id="user-login" type="text" name="login" placeholder="email@example.com">
@@ -164,10 +161,10 @@
             </a>
           </div>
         </div>
-        <ul class="open-hours">
-          <li class="schedule">С 10 до 20, ежедневно</li>
-          <li class="phone-number"><a href="tel:88124502525">8 812 450-25-25</a></li>
-        </ul>
+        <div class="open-hours">
+          <div class="schedule">С 10 до 20, ежедневно</div>
+          <div class="phone-number"><a href="tel:88124502525">8 812 450-25-25</a></div>
+        </div>
       </header>
       <main>
         <h1 class="visually-hidden">Магазин мороженого Gllacy</h1>
@@ -345,12 +342,12 @@
                 Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас
                 происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
               </p>
-              <form action="/subscribe" method="POST">
-                <p>
+              <form action="https://echo.htmlacademy.ru/" method="POST">
+                <fieldset class="fieldset-subscribe">
                   <label class="visually-hidden" for="newsletter">Введите email, чтобы подписаться на рассылку</label>
                   <input id="newsletter" type="email" name="email" placeholder="email@example.com">
                   <button type="submit" value="Отправить">Отправить</button>
-                </p>
+                </fieldset>
               </form>
             </div>
           </section>
@@ -362,7 +359,7 @@
         width="100%" height="430" allowfullscreen></iframe>
         <div class="map nojs">
           <img src="img/map.jpg" width="1250" height="430" alt="Карта Санкт-Петербурга">
-          <img class="pin" src="img/pin.png" alt="Индикатор месторасположения магазина">
+          <img class="pin" src="img/pin.png" width="218" height="142" alt="Индикатор месторасположения магазина">
         </div>
         <section class="address-feedback">
           <p class="address-text">Адрес главного офиса и&nbsp;офлайн&#8209;магазина:</p>
@@ -375,36 +372,40 @@
       </section>
       <footer>
         <div class="footer-wrapper">
-          <ul class="social">
-            <li>
-              <a href="">
-                <img class="twitter-link" src="img/svg/twitter.svg" alt="twitter">
-                <span class="visually-hidden">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img class="instagram-link" src="img/svg/instagram.svg" alt="instagram">
-                <span class="visually-hidden">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a href=""><img class="facebook-link" src="img/svg/fb.svg" alt="facebook">
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href=""><img class="vkontakte-link" src="img/svg/vk.svg" alt="vkontakte">
-                <span class="visually-hidden">Vkontakte</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="footer-nav">
-            <li><a href="">Для поставщиков</a></li>
-            <li><a href="">О производстве</a></li>
-            <li><a href="">Наши документы</a></li>
-            <li><a href="">Экологические стандарты</a></li>
-          </ul>
+          <div class="footer-links">
+            <ul class="social">
+              <li>
+                <a href="https://twitter.com/htmlacademy_ru">
+                  <img class="twitter-link" src="img/svg/twitter.svg" width="32" height="32" alt="twitter">
+                  <span class="visually-hidden">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/htmlacademy/">
+                  <img class="instagram-link" src="img/svg/instagram.svg" width="32" height="32" alt="instagram">
+                  <span class="visually-hidden">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/htmlacademy">
+                  <img class="facebook-link" src="img/svg/fb.svg" width="32" height="32" alt="facebook">
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://vk.com/htmlacademy">
+                  <img class="vkontakte-link" src="img/svg/vk.svg" width="32" height="32" alt="vkontakte">
+                  <span class="visually-hidden">Vkontakte</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="footer-nav">
+              <li><a href="">Для поставщиков</a></li>
+              <li><a href="">Наши документы</a></li>
+              <li><a href="">О производстве</a></li>
+              <li><a href="">Экологические стандарты</a></li>
+            </ul>
+          </div>
           <div class="made-in-logo">
             <a href="https://htmlacademy.ru/intensive/htmlcss">
               <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy-logo">
@@ -416,7 +417,7 @@
       <div class="modal transparent-background">
         <div class="feedback">
           <p class="feedback-text">Мы обязательно вам ответим!</p>
-          <form action="/feedback" method="POST" class="feedback-form">
+          <form action="https://echo.htmlacademy.ru/" method="POST" class="feedback-form">
             <p class="feedback-name">
               <label class="visually-hidden" for="submission-username">Введите имя и фамилию</label>
               <input id="submission-username" type="text" name="name" placeholder="Имя Фамилия">

@@ -16,7 +16,6 @@ var form = loginPopup.querySelector("form");
 var login = loginPopup.querySelector("[name=login]");
 var password = loginPopup.querySelector("[name=password]");
 
-
 var feedbackLink = document.querySelector(".feedback-form");
 var activeCart = document.querySelector(".cart-active");
 var headerCart = document.querySelector(".header-cart");
@@ -127,11 +126,11 @@ dropdownWrapper.addEventListener("mouseleave", function(evt) {
 
 
 // слушаем поиск
-headerSearch.addEventListener("mouseenter", function (evt) {
+searchWrapper.addEventListener("mouseenter", function (evt) {
     searchPopup.classList.add("modal-show-search");
 });
 
-headerSearch.addEventListener("click", (evt) => {
+headerSearch.addEventListener("click", function(evt) {
     evt.preventDefault();
 });
 
