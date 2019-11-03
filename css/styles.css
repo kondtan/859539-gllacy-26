@@ -886,7 +886,7 @@ div.subscribe-form-light {
     position: relative;
     display: block;
     width: 100%;
-    overflow: none;
+    overflow: hidden;
 }
 
 .pin {
@@ -903,7 +903,7 @@ iframe {
 
     width: 100%;
     height: 430px;
-    overflow: none;
+    overflow: hidden;
 
     border: none;
 }
