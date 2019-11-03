@@ -1,6 +1,4 @@
-var mapExists = document.querySelector(".map")
-
-var dropdownWrapper = document.querySelector(".dropdown-wrapper")
+var dropdownWrapper = document.querySelector(".dropdown-wrapper");
 var catalogLink = dropdownWrapper.querySelector(".catalog-link");
 var dropdownPopup = dropdownWrapper.querySelector(".catalog-dropdown");
 
@@ -20,6 +18,12 @@ var feedbackLink = document.querySelector(".feedback-form");
 var activeCart = document.querySelector(".cart-active");
 var headerCart = document.querySelector(".header-cart");
 
+
+var peskyInput = document.querySelector(".fieldset-subscribe input");
+
+
+var searchInput = searchPopup.querySelector("input");
+
 var isStorageSupport = true;
 var storageLogin = "";
 var storageEmail = "";
@@ -31,11 +35,81 @@ try {
     isStorageSupport = false;
 }
 
+//стилизируем поля (сырым CSS с :placeholder не работает Edge)
 
-if (mapExists) {
-    mapExists.classList.remove("nojs");
+window.onload = function(){
+    if (peskyInput) {
+        if(peskyInput.value) {
+            peskyInput.classList.add("bold-input");
+        } else {
+            peskyInput.classList.remove("bold-input");
+        };
+    };
+    if(searchInput.value) {
+        searchInput.classList.add("bold-input");
+    } else {
+        searchInput.classList.remove("bold-input");
+    }
+    if(login.value) {
+        login.classList.add("bold-input");
+    } else {
+        login.classList.remove("bold-input");
+    }
+    if(password.value) {
+        password.classList.add("bold-input");
+    } else {
+        password.classList.remove("bold-input");
+    }
+    if (feedbackLink) {
+        var feedbackName = feedbackPopup.querySelector("[name=name]");
+        var feedbackEmail = feedbackPopup.querySelector("[name=email]");
+
+        if(feedbackName.value) {
+            feedbackName.classList.add("bold-input");
+        } else {
+            feedbackName.classList.remove("bold-input");
+        };
+        if(feedbackEmail.value) {
+            feedbackEmail.classList.add("bold-input");
+        } else {
+            feedbackEmail.classList.remove("bold-input");
+        };       
+    }
 }
 
+if (peskyInput) {
+    peskyInput.addEventListener("input", function(evt) {
+    if(peskyInput.value) {
+            peskyInput.classList.add("bold-input");
+        } else {
+            peskyInput.classList.remove("bold-input");
+        }
+    });
+}
+
+searchInput.addEventListener("input", function(evt) {
+    if(searchInput.value) {
+        searchInput.classList.add("bold-input");
+    } else {
+        searchInput.classList.remove("bold-input");
+    }
+});
+
+login.addEventListener("input", function(evt) {
+    if(login.value) {
+        login.classList.add("bold-input");
+    } else {
+        login.classList.remove("bold-input");
+    }
+})
+
+password.addEventListener("input", function(evt) {
+    if(password.value) {
+        password.classList.add("bold-input");
+    } else {
+        password.classList.remove("bold-input");
+    }
+})
 
 //слушаем фидбэк
 if (feedbackLink) {
@@ -45,11 +119,11 @@ if (feedbackLink) {
     var feedbackClose = feedbackPopup.querySelector(".modal-close");
 
     var feedbackForm = feedbackPopup.querySelector("form");
+    var submitButton = feedbackPopup.querySelector("button");
     var feedbackName = feedbackPopup.querySelector("[name=name]");
     var feedbackEmail = feedbackPopup.querySelector("[name=email]");
     var feedbackContents = feedbackPopup.querySelector("[name=contents]");
-    var submitButton = feedbackPopup.querySelector("button");
-    
+
     feedbackLink.addEventListener("click", function (evt) {
         evt.preventDefault();
         if (document.querySelector("modal-show-feedback") == null) {
@@ -91,6 +165,23 @@ if (feedbackLink) {
     feedbackContainer.addEventListener("click", function (evt) {
         evt.stopPropagation();
     });
+
+    feedbackName.addEventListener("input", function(evt) {
+        if(feedbackName.value) {
+            feedbackName.classList.add("bold-input");
+        } else {
+            feedbackName.classList.remove("bold-input");
+        }
+    });
+
+    feedbackEmail.addEventListener("input", function(evt) {
+        if(feedbackEmail.value) {
+            feedbackEmail.classList.add("bold-input");
+        } else {
+            feedbackEmail.classList.remove("bold-input");
+        }
+    });
+
 
 };
 

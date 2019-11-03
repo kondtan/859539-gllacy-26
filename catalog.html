@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <title>Каталог магазина Глейси</title>
   </head>
@@ -138,7 +138,7 @@
                   <tr>
                     <td class="remove-cart-item"><button type="button"><span class="visually-hidden">Удалить товар</span></button></td> 
                     <td class="cart-item-preview"><img src="img/cart-item2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                    <td class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td class="cart-item-name">Клубничный пломбир с присыпкой&nbsp;из белого шоколада</td>
                     <td class="cart-item-weight-and-price"><span class="cart-item-weight">1,5 кг</span> х <span class="cart-item-price">300 руб.</span></td>
                     <td class="cart-item-total">450 руб.</td>
                   </tr>
@@ -199,29 +199,25 @@
               <li class="filter-option">
                 <label class="radio">
                   <input class="filter-input filter-input-radio" type="radio" name="product-group" value="zero-percent">
-                  <span class="radio-button"></span>
-                  <span class="fat-value">0%</span>
+                  <span class="radio-button">0%</span> 
                 </label>               
               </li>
               <li class="filter-option">
                 <label>
                   <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-ten-percent" checked>
-                  <span class="radio-button"></span>
-                  <span class="fat-value">до 10%</span> 
+                  <span class="radio-button">до 10%</span>
                 </label>
               </li>
               <li class="filter-option">
                 <label>
                   <input class="filter-input filter-input-radio" type="radio" name="product-group" value="below-30-percent">
-                  <span class="radio-button"></span>
-                  <span class="fat-value">до 30%</span> 
+                  <span class="radio-button">до 30%</span>
                 </label>
               </li>
               <li class="filter-option">
                 <label>
                   <input class="filter-input filter-input-radio" type="radio" name="product-group" value="above-30-percent">
-                  <span class="radio-button"></span>
-                  <span class="fat-value">выше 30%</span>
+                  <span class="radio-button">выше 30%</span>
                 </label> 
               </li>
             </ul>
@@ -233,36 +229,31 @@
               <li>
                 <label class="check">
                   <input class="check-input" name="chocolate-filling" type="checkbox" checked>
-                  <span class="check-box"></span>
-                  <span class="filling-value">шоколадные</span>
+                  <span class="check-box">шоколадные</span>
                 </label>
               </li>
               <li>
                 <label>
                   <input class="check-input" name="sprinkles-filling" type="checkbox" checked>
-                  <span class="check-box"></span>
-                  <span class="filling-value">сахарные присыпки</span>
+                  <span class="check-box">сахарные присыпки</span>
                 </label>
               </li>
               <li>
                 <label>
                 <input class="check-input" name="fruit-filling" type="checkbox">
-                <span class="check-box"></span>
-                <span class="filling-value">фрукты</span>
+                <span class="check-box">фрукты</span>
                 </label>
               </li>
               <li>
                 <label>
                 <input class="check-input" name="syrup-filling" type="checkbox">
-                <span class="check-box"></span>
-                <span class="filling-value">сиропы</span>
+                <span class="check-box">сиропы</span>
                 </label>
               </li>
               <li>
                 <label>
                 <input class="check-input" name="jam-filling" type="checkbox">
-                <span class="check-box"></span>
-                <span class="filling-value">джемы</span>
+                <span class="check-box">джемы</span>
                 </label>
               </li>
             </ul>
@@ -570,8 +561,8 @@
           </ul>
           <ul class="footer-nav">
             <li><a href="">Для поставщиков</a></li>
-            <li><a href="">О производстве</a></li>
             <li><a href="">Наши документы</a></li>
+            <li><a href="">О производстве</a></li>
             <li><a href="">Экологические стандарты</a></li>
           </ul>
         </div>
@@ -583,6 +574,6 @@
         </div>
       </div>
     </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
   </body>
 </html>

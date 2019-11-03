@@ -4,17 +4,17 @@
 <head>
   <meta charset="utf-8">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/styles.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
   <title>HTML Academy: Глейси</title>
 </head>
 
 <body>
-    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+
   <div class="site-wrapper">
-    <div class="site-container">
       <header class="index-header">
         <div class="main-navigation">
           <div class="site-navigation">
@@ -110,14 +110,17 @@
               <div class="modal-login">
                 <h2 class="visually-hidden">Личный кабинет</h2>
                 <form action="https://echo.htmlacademy.ru/" method="POST">
-                    <p class="login-email">
-                      <label class="visually-hidden" for="user-login">Логин</label>
-                      <input id="user-login" type="text" name="login" placeholder="email@example.com">
+                  <fieldset>
+                      <label class="login-email" for="user-login">
+                        <input id="user-login" type="text" name="login" placeholder="email@example.com">
+                        <span class="visually-hidden">Логин</span>
+                      </label>
+                      <label class="login-password" for="user-password">
+                        <input id="user-password" type="password" name="password" placeholder="••••••••">
+                        <span class="visually-hidden">Пароль</span>
+                      </label>
                     </p>
-                    <p class="login-password">
-                      <label class="visually-hidden" for="user-password">Пароль</label>
-                      <input id="user-password" type="password" name="password" placeholder="••••••••">
-                    </p>
+                  </fieldset>
                     <div class="login-bottom-wrapper">
                       <p class="login-links">
                         <a class="restore" href="">Забыли пароль?</a>
@@ -355,13 +358,15 @@
       </main>
       <section class="address">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" 
-        width="100%" height="430" allowfullscreen></iframe>
-        <div class="map nojs">
-          <img src="img/map.jpg" width="1250" height="430" alt="Карта Санкт-Петербурга">
-          <img class="pin" src="img/pin.png" width="218" height="142" alt="Индикатор месторасположения магазина">
-        </div>
-        <section class="address-feedback">
+        <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" 
+        width="100%" height="430" tabindex="-1" allowfullscreen></iframe>
+        <noscript>
+          <div class="map">
+            <img src="img/map.jpg" width="1250" height="430" alt="Карта Санкт-Петербурга">
+            <img class="pin" src="img/pin.png" width="218" height="142" alt="Индикатор месторасположения магазина">
+          </div>
+        </noscript>
+        <section class="address-feedback nojs">
           <p class="address-text">Адрес главного офиса и&nbsp;офлайн&#8209;магазина:</p>
           <p class="address-bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
           <p class="address-text-call">Для заказов по телефону:</p>
@@ -369,6 +374,8 @@
           <p class="address-text-time">(с 10 до 20 ежедневно)</p>
           <a href="feedback.html" class="feedback-form" tabindex="0">Форма обратной связи</a>
         </section>
+        <div class="address-wrapper">
+        </div>
       </section>
       <footer>
         <div class="footer-wrapper">
@@ -440,9 +447,8 @@
               class="visually-hidden">Закрыть</span></button>
         </div>
       </div>
-    </div>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
