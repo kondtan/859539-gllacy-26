@@ -18,9 +18,7 @@ var feedbackLink = document.querySelector(".feedback-form");
 var activeCart = document.querySelector(".cart-active");
 var headerCart = document.querySelector(".header-cart");
 
-
 var peskyInput = document.querySelector(".fieldset-subscribe input");
-
 
 var searchInput = searchPopup.querySelector("input");
 
@@ -73,7 +71,7 @@ window.onload = function(){
             feedbackEmail.classList.add("bold-input");
         } else {
             feedbackEmail.classList.remove("bold-input");
-        };       
+        };
     }
 }
 
@@ -113,7 +111,7 @@ password.addEventListener("input", function(evt) {
 
 //слушаем фидбэк
 if (feedbackLink) {
-    
+
     var feedbackPopup = document.querySelector(".modal");
     var feedbackContainer = document.querySelector(".feedback");
     var feedbackClose = feedbackPopup.querySelector(".modal-close");
@@ -187,24 +185,21 @@ if (feedbackLink) {
 
 // слушаем корзину
 headerCart.addEventListener("click", function (evt) {
-    evt.preventDefault(); 
+    evt.preventDefault();
 });
 
 if (activeCart) {
     var cartWrapper = document.querySelector(".cart-wrapper");
     var cartPopup = cartWrapper.querySelector(".cart");
-    
+
     cartWrapper.addEventListener("mouseenter", function(evt) {
         cartPopup.classList.add("show-cart");
     });
-    
+
     cartWrapper.addEventListener("mouseleave", function(evt) {
         cartPopup.classList.remove("show-cart");
     });
 }
-
-
-
 
 //слушаем дропдаун меню
 dropdownWrapper.addEventListener("mouseenter", function (evt) {
@@ -214,7 +209,6 @@ dropdownWrapper.addEventListener("mouseenter", function (evt) {
 dropdownWrapper.addEventListener("mouseleave", function(evt) {
     dropdownPopup.classList.remove("show-dropdown");
 });
-
 
 // слушаем поиск
 searchWrapper.addEventListener("mouseenter", function (evt) {
